@@ -6,6 +6,7 @@ Team:
 - Simone Galiotto
 - Sofia Arsego
 - Francesco Salzillo
+- Alberto Burato
 
 Link Drive condiviso:
 https://drive.google.com/drive/folders/1QHoWyuabUivW3WtDZsMondbYUVzovxm5
