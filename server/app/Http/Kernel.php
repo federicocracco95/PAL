@@ -43,6 +43,16 @@ class Kernel extends HttpKernel
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+
+        'auth.api' => [
+            \App\Http\Middleware\AddAuthHeader::class,
+            "auth:api"
+        ]
+    ];
+
+    protected $middlewarePriority = [
+        \App\Http\Middleware\AddAuthHeader::class,
+        \App\Http\Middleware\Authenticate::class,
     ];
 
     /**

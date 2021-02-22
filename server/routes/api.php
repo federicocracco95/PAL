@@ -14,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// auth api
+Route::post("/login",[AuthController::class,"login"]);
+
+
+
+// authentication required api
+Route::group(["middleware"=> "auth.api"],function(){
+
+    Route::post("/logout",[AuthController::class,"logout"]);
+
+    // users api
+    Route::post("/users", [UserController::class, "create"]);
+
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+    //return $request->user();
 });
