@@ -1,9 +1,9 @@
 # PAL project
 
 Team:
-- Alberto Burato (TeamLeader)
+- Alberto Burato 
 - Federico Cracco
-- Giovanni Capitanio
+- Giovanni Capitanio (TeamLeader)
 - Simone Galiotto
 - Sofia Arsego
 - Francesco Salzillo
