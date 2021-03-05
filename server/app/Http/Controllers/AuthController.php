@@ -12,7 +12,7 @@ use Laravel\Passport\PassportServiceProvider;
 class AuthController extends Controller
 {
     public function login(Request $request) {
-        $credentials = request(["email","password"]);
+        $credentials = request(["username","password"]);
          
         if (Auth::attempt($credentials)){
             

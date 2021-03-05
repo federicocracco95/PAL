@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddRelationsToModulesTable extends Migration
+class AddRelationsToConsultantsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class AddRelationsToModulesTable extends Migration
      */
     public function up()
     {
-        Schema::table('modules', function (Blueprint $table) {
-            $table->bigInteger("user_id")->unsigned()->nullable();
+        Schema::table('consultants', function (Blueprint $table) {
+            $table->bigInteger("creator_id")->unsigned()->nullable();
             $table
-                ->foreign("user_id")
+                ->foreign("creator_id")
                 ->references("id")
-                ->on("users")
+                ->on("pa_users")
                 ->onDelete("cascade");
         });
     }
@@ -30,9 +30,9 @@ class AddRelationsToModulesTable extends Migration
      */
     public function down()
     {
-        Schema::table('modules', function (Blueprint $table) {
-            $table->dropForeign("user_id");
-            $table->dropColumn("user_id");
+        Schema::table('consultants', function (Blueprint $table) {
+            $table->dropForeign("creator_id");
+            $table->dropColumn("creator_id");
         });
     }
 }
