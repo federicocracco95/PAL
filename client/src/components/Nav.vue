@@ -3,8 +3,9 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/login">Login</router-link> |
-      <router-link to="/modifica">Modifica password</router-link>
-      <router-link to="/adduser">Registrazione utente</router-link> 
+      <router-link to="/modifica">Modifica password</router-link> |
+      <router-link to="/adduser">Registrazione utente</router-link> |
+      <router-link to="/newpractice">Nuova pratica</router-link> 
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
-  <div class="login">   
-    <div class="flex items-center bg-white dark:bg-gray-900">
+  <div class="login bg-auto bg-no-repeat bg-center" style="background-image: url(../assets/background-login.jpg)">   
+    <div class="flex items-center dark:bg-gray-900">
       <div class="container mx-auto">
           <div class="bg-gray-300 rounded-lg p-4 max-w-md mx-auto my-10">
                 <div>
@@ -36,3 +36,4 @@ export default {
   }
 }
 </script>
+
