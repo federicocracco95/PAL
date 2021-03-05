@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Modifica from '../views/Modifica-password.vue'
 
+
 Vue.use(VueRouter)
 
 const routes = [

@@ -1,7 +1,7 @@
 <template>
     <div id="footer">
         <footer class="p-4">
-            <div class="flex items-center">
+            <div class="flex items-center container border-t-2 border-blue-900">
                 <img class="m-4" src="../assets/logo-tn.png" alt="">
                 <div class="flex flex-col text-left	 ml-2">
                     <div>
