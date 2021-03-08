@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddRelationsToConsultantsTable extends Migration
+class AddRelationsToInfoConsultantsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class AddRelationsToConsultantsTable extends Migration
      */
     public function up()
     {
-        Schema::table('consultants', function (Blueprint $table) {
+        Schema::table('info_consultants', function (Blueprint $table) {
             $table->bigInteger("creator_id")->unsigned()->nullable();
             $table
                 ->foreign("creator_id")
                 ->references("id")
-                ->on("pa_users")
+                ->on("users")
                 ->onDelete("cascade");
         });
     }
@@ -30,7 +30,7 @@ class AddRelationsToConsultantsTable extends Migration
      */
     public function down()
     {
-        Schema::table('consultants', function (Blueprint $table) {
+        Schema::table('info_consultants', function (Blueprint $table) {
             $table->dropForeign("creator_id");
             $table->dropColumn("creator_id");
         });

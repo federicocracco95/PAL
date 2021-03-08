@@ -30,7 +30,6 @@ class CreateDiseaseFormsTable extends Migration
             $table->string('total_disease_days');
             $table->timestamps();
             $table->string('status');
-            $table->string('creator');
         });
     }
 

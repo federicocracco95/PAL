@@ -16,7 +16,7 @@ class AuthController extends Controller
          
         if (Auth::attempt($credentials)){
             
-            $user = Auth::user();
+            $user = Auth::User();
             $token = $user->createToken("Personal Access Token")->accessToken;
 
             return response()

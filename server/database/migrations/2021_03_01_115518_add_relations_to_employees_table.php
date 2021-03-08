@@ -18,14 +18,14 @@ class AddRelationsToEmployeesTable extends Migration
             $table
                 ->foreign("creator_id")
                 ->references("id")
-                ->on("companies")
+                ->on("users")
                 ->onDelete("cascade");
                 
             $table->bigInteger("company_id")->unsigned()->nullable();
             $table
                 ->foreign("company_id")
                 ->references("id")
-                ->on("companies")
+                ->on("info_companies")
                 ->onDelete("cascade");
         });
     }

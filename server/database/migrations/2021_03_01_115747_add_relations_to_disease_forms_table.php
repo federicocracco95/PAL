@@ -14,6 +14,13 @@ class AddRelationsToDiseaseFormsTable extends Migration
     public function up()
     {
         Schema::table('disease_forms', function (Blueprint $table) {
+            $table->bigInteger("creator_id")->unsigned()->nullable();
+            $table
+                ->foreign("creator_id")
+                ->references("id")
+                ->on("users")
+                ->onDelete("cascade");
+
             $table->bigInteger("employee_id")->unsigned()->nullable();
             $table
                 ->foreign("employee_id")
@@ -25,7 +32,7 @@ class AddRelationsToDiseaseFormsTable extends Migration
             $table
                 ->foreign("company_id")
                 ->references("id")
-                ->on("companies")
+                ->on("info_companies")
                 ->onDelete("cascade");
         });
     }
@@ -38,6 +45,9 @@ class AddRelationsToDiseaseFormsTable extends Migration
     public function down()
     {
         Schema::table('disease_forms', function (Blueprint $table) {
+            $table->dropForeign("creator_id");
+            $table->dropColumn("creator_id");
+
             $table->dropForeign("employee_id");
             $table->dropColumn("employee_id");
 
