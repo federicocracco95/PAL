@@ -1,8 +1,8 @@
 <template>
   <div class="login" v-on:submit.prevent>   
-    <div class="flex items-center bg-white dark:bg-gray-900">
+    <div class="min-w-screen min-h-screen bg-random flex items-center justify-center px-5 py-5">
       <div class="container mx-auto">
-        <div class="bg-gray-300 rounded-lg p-4 max-w-md mx-auto my-10">
+        <div class="bg-gray-300 rounded-lg p-4 max-w-md my-10">
                 <div class="text-center">
                     <h1 class="my-2 text-3xl font-semibold text-blue-900 dark:text-gray-200">Accedi</h1>
                 </div>

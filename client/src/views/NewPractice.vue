@@ -111,10 +111,10 @@
             <table class="table-fixed mt-12">
                 <thead>
                     <tr>
-                    <th class="w-1/4 ...">Prospetto liquidazione Malattia</th>
-                    <th class="w-1/4 ...">Giorni non liquidati</th>
-                    <th class="w-1/4 ...">Giorni liquidati</th>
-                    <th class="w-1/4 ...">Importo giornaliero richesto in rimborso</th>
+                    <th class="w-1/4 text-left">Prospetto liquidazione Malattia</th>
+                    <th class="w-1/4">Giorni non liquidati</th>
+                    <th class="w-1/4">Giorni liquidati</th>
+                    <th class="w-1/4">Importo giornaliero richesto in rimborso</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -193,10 +193,10 @@
             <table class="table-fixed mt-12">
                 <thead>
                     <tr>
-                    <th class="w-1/4 ...">Prospetto liquidazione Malattia</th>
-                    <th class="w-1/4 ...">Giorni non liquidati</th>
-                    <th class="w-1/4 ...">Giorni liquidati</th>
-                    <th class="w-1/4 ...">Importo giornaliero richesto in rimborso</th>
+                    <th class="w-1/4 text-left">Prospetto liquidazione Malattia</th>
+                    <th class="w-1/4">Giorni non liquidati</th>
+                    <th class="w-1/4">Giorni liquidati</th>
+                    <th class="w-1/4">Importo giornaliero richesto in rimborso</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -228,9 +228,11 @@
                 <li>che i dati esposti nella presente domanda sono conformi alla verità ed alle registrazioni dei libri  paga e matricola; </li>
                 <li>di osservare ed applicare integralmente il vigente C.C.N.L. per gli operai dipendenti dalle imprese  edili ed affini, unitamente agli accordi locali integrativi, nonché lo statuto della Cassa Edile della  Provincia di Trento.</li>
             </ul>
-
-
-
+            <div class="flex justify-between">
+                <button class="bg-blue-800 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center"><span>Salva documento</span></button>
+                <button class="bg-gray-400 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center"><span>Genera pdf</span></button>
+            </div>
+            
         </div>
     </div>
 </template>

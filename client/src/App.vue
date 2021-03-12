@@ -2,6 +2,7 @@
   <div id="app">
     <nav-Grey></nav-Grey>
     <nav-top></nav-top>
+    <nav-middle></nav-middle>
     <router-view/>
     <!--
     <footer-back></footer-back>
