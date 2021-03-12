@@ -19,6 +19,8 @@ use App\Http\Controllers\UserController;
 // auth api
 Route::post("/login",[AuthController::class,"login"]);
 
+Route::post('/reset-password',[AuthController::class,"resetPassword"]);
+
 
 
 // authentication required api

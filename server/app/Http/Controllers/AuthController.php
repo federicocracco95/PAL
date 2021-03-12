@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
 use Laravel\Passport\Bridge\AccessToken;
 use Laravel\Passport\Token;
 use Laravel\Passport\PassportServiceProvider;
+use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
+use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -48,6 +52,40 @@ class AuthController extends Controller
             ], 200)
             ->withCookie($cookie);
     }
+
+    public function resetPassword (Request $request) {
+        $request->validate([
+            'email' => 'required|email',
+            'password'=> 'required|confirmed|min:6'
+        ]);
+
+        $user = User::where('email', $request->email)->where('password', $request->password);
+        if(!$user) {
+            return response()->json([
+                'message' => 'Utente non trovato',
+                'status_code' => 401
+
+            ], 401);
+        } else {
+            $user->password = "prova";//Hash::make($request->newPassword);
+
+            if($user->save()) {
+                return response()->json([
+                    'message' => "Utente non trovato",
+                    'status_code' => 200
+                ], 200);
+            } else {
+                return response()->json([
+                    'message' => "  Errore nel salvataggio",
+                    'status_code' => 500
+                ], 500);
+            }
+        }
+    }
+
+   
+
+
         
     
 }
