@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddRelationsToUsersTable extends Migration
+class AddRelationsToDiseaseFormsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,12 @@ class AddRelationsToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->bigInteger("role_id")->unsigned()->nullable();
+        Schema::table('disease_forms', function (Blueprint $table) {
+            $table->bigInteger("creator_id")->unsigned()->nullable();
             $table
-                ->foreign("role_id")
+                ->foreign("creator_id")
                 ->references("id")
-                ->on("roles")
-                ->onDelete("cascade");
-
-            $table->bigInteger("user_info_id")->unsigned()->nullable();
-            $table
-                ->foreign("user_info_id")
-                ->references("id")
-                ->on("user_infos")
+                ->on("users")
                 ->onDelete("cascade");
 
             $table->bigInteger("employee_id")->unsigned()->nullable();
@@ -34,12 +27,12 @@ class AddRelationsToUsersTable extends Migration
                 ->references("id")
                 ->on("employees")
                 ->onDelete("cascade");
-
+                
             $table->bigInteger("company_id")->unsigned()->nullable();
             $table
                 ->foreign("company_id")
                 ->references("id")
-                ->on("companies")
+                ->on("info_companies")
                 ->onDelete("cascade");
         });
     }
@@ -51,12 +44,9 @@ class AddRelationsToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropForeign("role_id");
-            $table->dropColumn("role_id");
-
-            $table->dropForeign("user_info_id");
-            $table->dropColumn("user_info_id");
+        Schema::table('disease_forms', function (Blueprint $table) {
+            $table->dropForeign("creator_id");
+            $table->dropColumn("creator_id");
 
             $table->dropForeign("employee_id");
             $table->dropColumn("employee_id");

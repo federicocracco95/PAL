@@ -25,7 +25,10 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: Login
+    component: Login,
+    meta: {
+      label: "Login",
+    },
   },
   {
     path: '/modifica',
@@ -45,7 +48,33 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes
 })
+
+// Auth based guard
+router.beforeEach((to, from, next) => {
+
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+
+    // if route requires auth
+    if (localStorage.getItem('user')) {
+      
+      // if user is logged in
+      console.log('auth: OK, vai pure')
+      next()
+
+    } else {
+      // if user is not logged in
+      console.log('auth: NO, rilogga')
+
+      router.push('/login');
+      next(false);
+    }
+  } else {
+    next();
+  }
+});
 
 export default router
