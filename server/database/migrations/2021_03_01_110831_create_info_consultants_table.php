@@ -15,9 +15,6 @@ class CreateInfoConsultantsTable extends Migration
     {
         Schema::create('info_consultants', function (Blueprint $table) {
             $table->id();
-            $table->string('username');
-            $table->string('email');
-            $table->string('password');
             $table->string('name');
             $table->string('surname');
             $table->timestamps();
