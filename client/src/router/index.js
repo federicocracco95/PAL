@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Modifica from '../views/Modifica-password.vue'
-import AddUser from '../views/AddUser.vue'
 import NewPractice from '../views/NewPractice.vue'
 
 Vue.use(VueRouter)
@@ -31,11 +30,6 @@ const routes = [
     path: '/modifica',
     name: 'Modifica',
     component: Modifica
-  },
-  {
-    path: '/adduser',
-    name: 'AddUser',
-    component: AddUser
   },
   {
     path: '/newpractice',

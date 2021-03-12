@@ -40,16 +40,16 @@
 
         <div class="container mx-auto px-10">
             <div class="grid md:grid-cols-2 md:gap-2"> 
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Ditta"> 
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Codice C.E.">
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Al Signor"> 
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Nato il"> 
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Residente a">
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Prov."> 
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Cap">
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Qualifica">
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Paga oraria"> 
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Data assunzione"> 
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Ditta"> 
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Codice C.E.">
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Al Signor"> 
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Nato il"> 
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Residente a">
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Prov."> 
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Cap">
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Qualifica">
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Paga oraria"> 
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Data assunzione"> 
             </div>
             <div class="flex">
                 <div class="flex-1 my-4">
@@ -77,14 +77,160 @@
             </div>
             <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Trimestre di riferimento"> 
             <div class="grid md:grid-cols-2 md:gap-2"> 
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Ore ordinarie di lavoro"> 
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Ore di malattia/infortunio">
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Ore di C.I.G."> 
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Ore per ferie e permessi retribuiti"> 
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Altre retribuite">
-                <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Totale ore trimestre">
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Ore ordinarie di lavoro"> 
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Ore di malattia/infortunio">
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Ore di C.I.G."> 
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Ore per ferie e permessi retribuiti"> 
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Altre retribuite">
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Totale ore trimestre">
             </div>
             <input type="text" name="mail" class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Orario settimanale applicato nel periodo denunciato: ore">
+
+            <h3 class="text-lg font-bold py-2">Documenti da allegare:</h3>
+            <ul class="px-4 mb-6">
+                <li>Copia leggibile della documentazione medica;</li>
+                <li>Copia delle buste paga riferite ai periodi chiesti a rimborso (solo in caso di malattie superiori ai 3 gg);</li>
+                <li>Copia delle contabili di pagamento delle buste paga di cui sopra;</li>
+                <li>Copia delle denunce MUT (e relative quietanze di pagamento) qualora per il lavoratore siano state versate;</li>
+                <li>Ore presso altre Casse Edili nel trimestre antecedente l’inizio evento;</li>
+            </ul>
+            <button class="bg-blue-800 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center"><span>Carica documenti</span></button>
+
+            <div class="grid md:grid-cols-2 md:gap-2"> 
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Signor"> 
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Nato il"> 
+            </div>
+            <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Malattia iniziata il">
+            <h3 class="text-lg font-bold mt-6">Periodo denunciato:</h3>
+            <div class="grid md:grid-cols-3 md:gap-2 content-center	flex items-center	">
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Da"> 
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="A">
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="= Giorni">
+            </div>
+            
+            <table class="table-fixed mt-12">
+                <thead>
+                    <tr>
+                    <th class="w-1/4 ...">Prospetto liquidazione Malattia</th>
+                    <th class="w-1/4 ...">Giorni non liquidati</th>
+                    <th class="w-1/4 ...">Giorni liquidati</th>
+                    <th class="w-1/4 ...">Importo giornaliero richesto in rimborso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>primi 3 gg. per malattia fino a 6 giorni</td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                    </tr>
+                    <tr>
+                        <td>primi 3 gg. per malattia superiore a 6 e fino a 12 giorni</td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                    </tr>
+                    <tr>
+                        <td>primi 3 gg. per malattia superiore a 12 giorni</td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                    </tr>
+                    <tr>
+                        <td>dal 4° al 20° giorno indennizzati INPS</td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                    </tr>
+                    <tr>
+                        <td>dal 21° al 180° giorno indennizzati INPS</td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                    </tr>
+                    <tr>
+                        <td>dal 181° al 365° giorno NON indennizzati INPS (270° giorno per operai con anzianità inferiore a 3 anni e mezzo)</td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="flex justify-center items-center">
+                <div class="w-1/2 mx-4">
+                    <h3 class="font-bold text-xl uppercase text-right">Totale</h3>
+                </div>
+                <div class="w-1/2 mr-4">
+                    <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Da">
+                </div>
+            </div>
+
+            <hr class="m-20">
+
+            <div class="grid md:grid-cols-2 md:gap-2"> 
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Infortunio del"> 
+                <div class="flex-1 mx-4 my-4">
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" name="accountType" value="si">
+                        <span class="ml-2">Nuova</span>
+                    </label>
+                    <label class="inline-flex items-center ml-6">
+                        <input type="checkbox" name="accountType" value="no">
+                        <span class="ml-2">Continuazione</span>
+                    </label>
+                    <label class="inline-flex items-center ml-6">
+                        <input type="checkbox" name="accountType" value="no">
+                        <span class="ml-2">Fine</span>
+                    </label>
+                </div>
+            </div>
+            <h3 class="text-lg font-bold mt-6">Periodo denunciato:</h3>
+            <div class="grid md:grid-cols-3 md:gap-2 content-center	flex items-center	">
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Da"> 
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="A">
+                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="= Giorni">
+            </div>
+            <table class="table-fixed mt-12">
+                <thead>
+                    <tr>
+                    <th class="w-1/4 ...">Prospetto liquidazione Malattia</th>
+                    <th class="w-1/4 ...">Giorni non liquidati</th>
+                    <th class="w-1/4 ...">Giorni liquidati</th>
+                    <th class="w-1/4 ...">Importo giornaliero richesto in rimborso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>dal 1 al 90 giorno</td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                    </tr>
+                    <tr>
+                        <td>dal 91 giorno a fine infortunio</td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="flex justify-center items-center my-4">
+                <div class="w-1/2 mx-4">
+                    <h3 class="font-bold text-xl uppercase text-right">Totale</h3>
+                </div>
+                <div class="w-1/2">
+                    <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Da">
+                </div>
+            </div>
+            <h3 class="text-lg font-bold py-2">Il sottoscritto legale rappresentante, consapevole delle responsabilità penali (art. 640 C.P.),  DICHIARA: </h3>
+            <ul class="px-4 mb-6">
+                <li>di aver corrisposto integralmente al lavoratore beneficiario il trattamento chiesto in rimborso con la  presente domanda; </li>
+                <li>che i dati esposti nella presente domanda sono conformi alla verità ed alle registrazioni dei libri  paga e matricola; </li>
+                <li>di osservare ed applicare integralmente il vigente C.C.N.L. per gli operai dipendenti dalle imprese  edili ed affini, unitamente agli accordi locali integrativi, nonché lo statuto della Cassa Edile della  Provincia di Trento.</li>
+            </ul>
+
+
+
         </div>
     </div>
 </template>
@@ -96,3 +242,9 @@ export default {
   }
 }
 </script>
+
+<style>
+ul {
+    list-style-type: circle;
+    }
+</style>

@@ -15,7 +15,9 @@
                   </div>               
                 
                 <div class="w-1/2">
-                  <img class="h-12" src="../assets/proifile-user-white.svg" alt="">
+                  <div class="flex flex-row-reverse">
+                    <img class="h-12" src="../assets/proifile-user-white.svg" alt="">
+                  </div>
                 </div>
             </div> 
      </navbar>
