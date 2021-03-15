@@ -5,6 +5,7 @@ import Login from '../views/Login.vue'
 import Modifica from '../views/Modifica-password.vue'
 import NuovaPratica from '../views/NewPractice.vue'
 import Profilo from '../views/Modifica-profilo.vue'
+import PraticheEffetuate from '../views/PraticheEffetuate.vue'
 
 Vue.use(VueRouter)
 
@@ -31,6 +32,11 @@ const routes = [
     path: '/profile',
     name: 'Profilo',
     component: Profilo,
+  },
+  {
+    path: '/pratiche-effetuate',
+    name: 'PraticheEffetuate',
+    component: PraticheEffetuate,
   },
   {
     path: '/login',
