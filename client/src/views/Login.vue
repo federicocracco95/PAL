@@ -76,7 +76,6 @@ export default {
 
         localStorage.setItem("user", JSON.stringify(res.data.logged_in_user));
         this.$router.push("/");
-        location.reload();
       } catch (error) {
         this.error = "Username o password errate. Riprova.";
       }
