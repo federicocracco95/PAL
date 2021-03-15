@@ -3,7 +3,7 @@
       <div class="container flex justify-around">
             <router-link class="text-xl" to="/modifica">Pratica effetuata</router-link>
             <router-link class="text-xl" to="/modificaprofilo">Pratica in attesa</router-link>
-            <router-link class="text-xl" to="/newpractice">Nuova pratica</router-link> 
+            <router-link class="text-xl" to="/nuovapratica">Nuova pratica</router-link> 
       </div>
 
   </div>

@@ -239,7 +239,7 @@
 
 <script>
 export default {
-  name: 'NewPractice',
+  name: 'NuovaPratica',
   props: {
   }
 }

@@ -3,8 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Modifica from '../views/Modifica-password.vue'
-import NewPractice from '../views/NewPractice.vue'
-import ModificaProfile from '../views/Modifica-profilo.vue'
+import NuovaPratica from '../views/NewPractice.vue'
+import Profilo from '../views/Modifica-profilo.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +21,16 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/nuovapratica',
+    name: 'NuovaPratica',
+    component: NuovaPratica,
+  },
+  {
+    path: '/profile',
+    name: 'Profilo',
+    component: Profilo,
   },
   {
     path: '/login',

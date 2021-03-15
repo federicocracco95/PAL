@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  name: 'modificaProfilo',
+  name: 'Profilo',
   components: {
   }
 }
