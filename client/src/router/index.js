@@ -33,17 +33,10 @@ const routes = [
   {
     path: '/modifica',
     name: 'Modifica',
-    component: Modifica
-  },
-  {
-    path: '/newpractice',
-    name: 'NewPractice',
-    component: NewPractice
-  },
-  {
-    path: '/modificaprofilo',
-    name: 'ModificaProfile',
-    component: ModificaProfile
+    component: Modifica,
+    meta: {
+      label: "Modifica",
+    },
   }
 ]
 
