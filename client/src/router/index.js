@@ -32,7 +32,10 @@ const routes = [
   {
     path: '/modifica',
     name: 'Modifica',
-    component: Modifica
+    component: Modifica,
+    meta: {
+      label: "Modifica",
+    },
   }
 ]
 

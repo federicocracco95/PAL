@@ -56,10 +56,12 @@ class AuthController extends Controller
     public function resetPassword (Request $request) {
         $request->validate([
             'email' => 'required|email',
-            'password'=> 'required|confirmed|min:6'
+            'password'=> 'required'
         ]);
 
-        $user = User::where('email', $request->email)->where('password', $request->password);
+        $user = User::where('email', $request->email)
+            ->where('username', $request->username)
+            ->first();
         if(!$user) {
             return response()->json([
                 'message' => 'Utente non trovato',
@@ -67,11 +69,11 @@ class AuthController extends Controller
 
             ], 401);
         } else {
-            $user->password = "prova";//Hash::make($request->newPassword);
+            $user->password = Hash::make($request->newPassword);
 
             if($user->save()) {
                 return response()->json([
-                    'message' => "Utente non trovato",
+                    'message' => "Password aggiornata",
                     'status_code' => 200
                 ], 200);
             } else {
