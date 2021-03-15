@@ -21,12 +21,14 @@ Route::post("/login",[AuthController::class,"login"]);
 
 Route::post('/reset-password',[AuthController::class,"resetPassword"]);
 
+Route::post("/logout",[AuthController::class,"logout"]);
+
 
 
 // authentication required api
 Route::group(["middleware"=> "auth.api"],function(){
 
-    Route::post("/logout",[AuthController::class,"logout"]);
+    //Route::post("/logout",[AuthController::class,"logout"]);
 
     // users api
     Route::post("/users", [UserController::class, "create"]);
