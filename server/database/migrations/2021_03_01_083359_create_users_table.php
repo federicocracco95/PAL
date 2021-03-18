@@ -22,9 +22,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->boolean('is_pa_user')->default(FALSE);
-            $table->boolean('is_consultant')->default(FALSE);
-            $table->boolean('is_company')->default(FALSE);
+            $table->string('role');
             $table->boolean('first_time_login')->default(TRUE);
             $table->timestamps();
         });
