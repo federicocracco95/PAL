@@ -7,6 +7,7 @@ import NuovaPratica from '../views/NewPractice.vue'
 import Profilo from '../views/Modifica-profilo.vue'
 import PraticheEffetuate from '../views/PraticheEffetuate.vue'
 import PraticheAttesa from '../views/PraticheAttesa.vue'
+import CreaUtente from '../views/CreaUtente.vue'
 
 Vue.use(VueRouter)
 
@@ -38,6 +39,11 @@ const routes = [
     path: '/pratiche-effetuate',
     name: 'PraticheEffetuate',
     component: PraticheEffetuate,
+  },
+  {
+    path: '/crea-utente',
+    name: 'CreaUtente',
+    component: CreaUtente,
   },
   {
     path: '/pratiche-attesa',

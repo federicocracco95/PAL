@@ -1,9 +1,11 @@
 <template>
-    <div class="newpractive m-4">
-        <div class="flex justify-center">
-            <h1 class="text-3xl m-4 uppercase">Nuova Pratica </h1>
+    <div class="newpractive m-8">
+
+        <div class="flex justify-center my-8">
+            <h2 class="uppercase text-2xl font-bold">Modulo denuncia - richiesta rimborso malattia/infortunio</h2>
         </div>
-        <div class="flex justify-center">    
+
+        <div class="flex justify-center mb-8">    
             <div class="relative inline-flex m-4">
                 <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
                 <select class="border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
@@ -32,10 +34,6 @@
                     <option>White</option>
                 </select>
             </div>
-        </div>
-
-        <div class="flex justify-center">
-            <h3 class="uppercase font-bold">Modulo denuncia - richiesta rimborso malattia/infortunio</h3>
         </div>
 
         <div class="container mx-auto px-10">
@@ -96,7 +94,7 @@
             </ul>
             <button class="bg-blue-800 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center"><span>Carica documenti</span></button>
 
-            <div class="grid md:grid-cols-2 md:gap-2"> 
+            <div class="mt-8 grid md:grid-cols-2 md:gap-2"> 
                 <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Signor"> 
                 <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Nato il"> 
             </div>
@@ -108,7 +106,7 @@
                 <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="= Giorni">
             </div>
             
-            <table class="table-fixed mt-12">
+            <table class="table-fixed mt-8">
                 <thead>
                     <tr>
                     <th class="w-1/4 text-left">Prospetto liquidazione Malattia</th>
@@ -165,63 +163,7 @@
                 </div>
             </div>
 
-            <hr class="m-20">
-
-            <div class="grid md:grid-cols-2 md:gap-2"> 
-                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Infortunio del"> 
-                <div class="flex-1 mx-4 my-4">
-                    <label class="inline-flex items-center">
-                        <input type="checkbox" name="accountType" value="si">
-                        <span class="ml-2">Nuova</span>
-                    </label>
-                    <label class="inline-flex items-center ml-6">
-                        <input type="checkbox" name="accountType" value="no">
-                        <span class="ml-2">Continuazione</span>
-                    </label>
-                    <label class="inline-flex items-center ml-6">
-                        <input type="checkbox" name="accountType" value="no">
-                        <span class="ml-2">Fine</span>
-                    </label>
-                </div>
-            </div>
-            <h3 class="text-lg font-bold mt-6">Periodo denunciato:</h3>
-            <div class="grid md:grid-cols-3 md:gap-2 content-center	flex items-center	">
-                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Da"> 
-                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="A">
-                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="= Giorni">
-            </div>
-            <table class="table-fixed mt-12">
-                <thead>
-                    <tr>
-                    <th class="w-1/4 text-left">Prospetto liquidazione Malattia</th>
-                    <th class="w-1/4">Giorni non liquidati</th>
-                    <th class="w-1/4">Giorni liquidati</th>
-                    <th class="w-1/4">Importo giornaliero richesto in rimborso</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>dal 1 al 90 giorno</td>
-                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
-                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
-                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
-                    </tr>
-                    <tr>
-                        <td>dal 91 giorno a fine infortunio</td>
-                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
-                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
-                        <td><input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder=""></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="flex justify-center items-center my-4">
-                <div class="w-1/2 mx-4">
-                    <h3 class="font-bold text-xl uppercase text-right">Totale</h3>
-                </div>
-                <div class="w-1/2">
-                    <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Da">
-                </div>
-            </div>
+            
             <h3 class="text-lg font-bold py-2">Il sottoscritto legale rappresentante, consapevole delle responsabilità penali (art. 640 C.P.),  DICHIARA: </h3>
             <ul class="px-4 mb-6">
                 <li>di aver corrisposto integralmente al lavoratore beneficiario il trattamento chiesto in rimborso con la  presente domanda; </li>
@@ -247,6 +189,6 @@ export default {
 
 <style>
 ul {
-    list-style-type: circle;
+    list-style-type: circle !important;
     }
 </style>

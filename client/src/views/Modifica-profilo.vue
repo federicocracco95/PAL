@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <link rel="stylesheet" 
         href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
         integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
@@ -15,7 +15,7 @@
             </div>
 
 
-            <div class="py-4 box-border h-1/2 w-1/2 py-2 ">
+            <div class="py-4 box-border h-1/2 w-1/2 ">
                 <div class=" md:gap-2"> 
                 <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Nome"> 
                 <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Cognome">

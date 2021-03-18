@@ -10,7 +10,7 @@
                             <tr class="bg-gray-200 text-blue-800 text-sm leading-normal">
                                 <th class="py-3 px-6 text-left">Cognome Nome</th>
                                 <th class="py-3 px-6 text-left">Numero Pratica</th>
-                                <th class="py-3 px-6 text-center">Malattia / Infortunio</th>
+                                <th class="py-3 px-6 text-center">Malattia</th>
                                 <th class="py-3 px-6 text-center">Data Pratica</th>
                             </tr>
                         </thead>
