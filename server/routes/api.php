@@ -26,7 +26,7 @@ Route::post('/reset-password',[AuthController::class,"resetPassword"]);
 // authentication required api
 Route::group(["middleware"=> "auth.api"],function(){
 
-    //Route::post("/logout",[AuthController::class,"logout"]);
+    Route::post("/logout",[AuthController::class,"logout"]);
 
     // users api
     Route::post("/users", [UserController::class, "create"]);
