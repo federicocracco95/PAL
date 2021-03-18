@@ -1,15 +1,11 @@
 import axios from 'axios';
 import router from '../router';
 
-const baseUrl = 'http://127.0.0.1:8000/api';
+const baseUrl = 'http://localhost:8000/api';
 
 const api = axios.create({
-    baseURL: `${baseUrl}`,
-    headers: {
-    Accept: 'application/json',
-    ContentType: 'application/json',
-    withCredentials: true,
-    }
+  baseURL: `${baseUrl}`,
+  withCredentials: true,
 });
 
 
@@ -29,14 +25,13 @@ api.interceptors.response.use(
                 case 401:
                     router.push('/login');
                     break;
-  
+
                 default:
                 break;
             }
             return Promise.reject(error.response);
         }
     }
-  );
+);
 
 export default api;
-
