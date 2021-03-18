@@ -22,6 +22,7 @@ Route::post("/login",[AuthController::class,"login"]);
 Route::post('/reset-password',[AuthController::class,"resetPassword"]);
 
 
+
 // authentication required api
 Route::group(["middleware"=> "auth.api"],function(){
 
@@ -29,13 +30,7 @@ Route::group(["middleware"=> "auth.api"],function(){
 
     // users api
     Route::post("/users", [UserController::class, "create"]);
-
-    
-    Route::post("/logout",[AuthController::class,"logout"]);
-
-    Route::get("/nuovapratica",[InfoCompanyController::class,"getCompanies"]);
-
-
+    Route::get("/nuovapratica", [InfoCompanyController::class, "getCompanies"]);
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
     //return $request->user();
 });

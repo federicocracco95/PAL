@@ -269,9 +269,7 @@
         placeholder="Malattia iniziata il"
       />
       <h3 class="text-lg font-bold mt-6">Periodo denunciato:</h3>
-      <div
-        class="grid md:grid-cols-3 md:gap-2 content-center flex items-center"
-      >
+      <div class="grid md:grid-cols-3 md:gap-2 content-center	flex items-center	">
         <input
           type="text"
           name="mail"
@@ -522,25 +520,15 @@
 <script>
 export default {
   name: "NuovaPratica",
-  data() {
-    return {
-    test: null,
-     newForm: {
-         
-     }
-    };
-  },
+  props: {},
   async mounted() {
-    let response = await this.$api.get("/nuovapratica");
-    console.log(response);
-    this.test = response;
-    //this.profile.id = response.data.id;
-    //this.profile = response.data;
-  },
-  methods: {
-
-  },
-  computed: {},
+    try {
+      let response = await this.$api.get("nuovapratica");
+      console.log(response.data);
+    } catch (e) {
+      console.log(e);
+    }
+  }
 };
 </script>
 
