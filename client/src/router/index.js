@@ -3,7 +3,11 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Modifica from '../views/Modifica-password.vue'
-
+import NuovaPratica from '../views/NewPractice.vue'
+import Profilo from '../views/Modifica-profilo.vue'
+import PraticheEffetuate from '../views/PraticheEffetuate.vue'
+import PraticheAttesa from '../views/PraticheAttesa.vue'
+import CreaUtente from '../views/CreaUtente.vue'
 
 Vue.use(VueRouter)
 
@@ -20,6 +24,31 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/nuovapratica',
+    name: 'NuovaPratica',
+    component: NuovaPratica,
+  },
+  {
+    path: '/profile',
+    name: 'Profilo',
+    component: Profilo,
+  },
+  {
+    path: '/pratiche-effetuate',
+    name: 'PraticheEffetuate',
+    component: PraticheEffetuate,
+  },
+  {
+    path: '/crea-utente',
+    name: 'CreaUtente',
+    component: CreaUtente,
+  },
+  {
+    path: '/pratiche-attesa',
+    name: 'PraticheAttesa',
+    component: PraticheAttesa,
   },
   {
     path: '/login',

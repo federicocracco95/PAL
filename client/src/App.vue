@@ -1,8 +1,12 @@
 <template>
   <div id="app">
+    <nav-Grey></nav-Grey>
     <nav-top></nav-top>
+    <nav-middle></nav-middle>
     <router-view/>
+    <!--
     <footer-back></footer-back>
+    -->
   </div>
 </template>
 
@@ -11,7 +15,6 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
