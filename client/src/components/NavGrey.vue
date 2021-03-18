@@ -25,7 +25,7 @@
                         <div id="sortboxmenu" class="absolute mt-1 right-1 top-full min-w-max shadow rounded opacity-0 bg-white border-gray-400 transition delay-75 ease-in-out z-10">
                           <ul class="block text-left text-gray-900">
                               <li><a href="/profile" class="block px-3 py-2 hover:bg-gray-200">Modifica Profilo</a></li>
-                              <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Loguot</a></li>
+                              <li><a href="#" @click="logout()" class="block px-3 py-2 hover:bg-gray-200">Logout</a></li>
                           </ul>
                         </div>
                       </div>
@@ -57,6 +57,12 @@ export default {
         username: null,
         },
     };
+  },
+  methods: {
+    async logout() {
+      localStorage.removeItem('user');
+        return await this.$api.post("/logout");
+      },
   },
   mounted() {
       this.user = JSON.parse(localStorage.getItem("user"));

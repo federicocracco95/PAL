@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\InfoCompanyController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -18,11 +19,7 @@ use App\Http\Controllers\UserController;
 
 // auth api
 Route::post("/login",[AuthController::class,"login"]);
-
 Route::post('/reset-password',[AuthController::class,"resetPassword"]);
-
-Route::post("/logout",[AuthController::class,"logout"]);
-
 
 
 // authentication required api
@@ -32,6 +29,12 @@ Route::group(["middleware"=> "auth.api"],function(){
 
     // users api
     Route::post("/users", [UserController::class, "create"]);
+
+    
+    Route::post("/logout",[AuthController::class,"logout"]);
+
+    Route::get("/nuovapratica",[InfoCompanyController::class,"getCompanies"]);
+
 
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
     //return $request->user();
