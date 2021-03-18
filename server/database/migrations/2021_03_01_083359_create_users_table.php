@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->boolean('is_pa_user')->default(FALSE);
             $table->boolean('is_consultant')->default(FALSE);
             $table->boolean('is_company')->default(FALSE);
+            $table->boolean('first_time_login')->default(TRUE);
             $table->timestamps();
         });
     }

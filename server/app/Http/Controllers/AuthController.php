@@ -15,12 +15,24 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
+    /*
+    /**
+         * Instantiate a new controller instance.
+         *
+         * @return void
+         
+        public function __construct()
+        {
+            $this->middleware('auth.basic'); 
+        }
+        */
     public function login(Request $request) {
+        
         $credentials = request(["username","password"]);
          
         if (Auth::attempt($credentials)){
             
-            $user = Auth::User();
+            $user = Auth::user();
             $token = $user->createToken("Personal Access Token")->accessToken;
 
             return response()
@@ -41,10 +53,11 @@ class AuthController extends Controller
         return response()->json([
             "error" => "invalid-credentials"
         ], 422);
+
     }
 
     public function logout (Request $request){ 
-        $request->user()->token()->revoke();
+        //$request->user()->token()->revoke();
         $cookie = Cookie::forget('sessionToken');
         return response()
             ->json([

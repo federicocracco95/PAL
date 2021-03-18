@@ -15,7 +15,10 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      requiresAuth: true,
+    }
   },
   {
     path: '/about',
@@ -76,7 +79,6 @@ const router = new VueRouter({
 
 // Auth based guard
 router.beforeEach((to, from, next) => {
-
   if (to.matched.some(record => record.meta.requiresAuth)) {
 
     // if route requires auth

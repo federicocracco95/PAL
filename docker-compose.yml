@@ -1,0 +1,31 @@
+version: "3"
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - database:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-u", "fitnessitaly", "-pfitnessitaly_db_password"]
+      timeout: 20s
+      retries: 10
+    ports:
+      - 3307:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_ROOT_USER=root
+      - MYSQL_DATABASE=pal
+      - MYSQL_USER=pal
+      - MYSQL_PASSWORD=HLdW3KbaWvRCEq8PUz3xku8iraYEVIq6w3wDPJe/ggI=
+    networks:
+      - default
+volumes:
+  database:
+    driver: local
+  fitnessitaly_database:
+    external: true
+
+networks:
+  proxynet:
+    external:
+      name: proxy_network
+  default:
