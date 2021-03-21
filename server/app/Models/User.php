@@ -38,8 +38,6 @@ class User extends Authenticatable
         'password',
         'remember_token',
         'created_at',
-        'info_consultant_id',
-        'info_company_id',
         'updated_at'
     ];
 
