@@ -84,7 +84,7 @@ export default {
     async resetPassword() {
       if(this.checkPassword()) {
         try {
-            await this.$api.post("/reset-password", {
+            await this.$api.post("/resetpassword", {
             username: this.user['username'],
             email: this.user['email'],
             password: this.oldPassword,

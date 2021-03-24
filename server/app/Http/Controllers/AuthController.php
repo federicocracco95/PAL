@@ -57,7 +57,7 @@ class AuthController extends Controller
     }
 
     public function logout (Request $request){ 
-        //$request->user()->token()->revoke();
+        $request->user()->token()->revoke();
         $cookie = Cookie::forget('sessionToken');
         return response()
             ->json([
@@ -66,7 +66,7 @@ class AuthController extends Controller
             ->withCookie($cookie);
     }
 
-    public function resetPassword (Request $request) {
+    public function firstLoginChange (Request $request) {
         $request->validate([
             'email' => 'required|email',
             'password'=> 'required'

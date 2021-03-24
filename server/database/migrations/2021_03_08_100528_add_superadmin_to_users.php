@@ -21,7 +21,7 @@ class AddSuperadminToUsers extends Migration
             $superadmin->username = "superadmin";
             $superadmin->email = "superadmin@superadmin.com";
             $superadmin->password = Hash::make("password");
-            $superadmin->is_pa_user = TRUE;
+            $superadmin->role = "pa_user";
             $superadmin->info_consultant_id = NULL;
             $superadmin->info_company_id = NULL;
             
