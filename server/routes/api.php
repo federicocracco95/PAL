@@ -1,9 +1,11 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\InfoCompanyController;
+use App\Http\Controllers\InfoConsultantController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\DiseaseFormController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -19,18 +21,17 @@ use App\Http\Controllers\UserController;
 
 // auth api
 Route::post("/login",[AuthController::class,"login"]);
-Route::post('/reset-password',[AuthController::class,"resetPassword"]);
+Route::post('/resetpassword',[AuthController::class,"firstLoginChange"]);
 
 
 
 // authentication required api
 Route::group(["middleware"=> "auth.api"],function(){
 
-    Route::post("/logout",[AuthController::class,"logout"]);
-
-    // users api
+    Route::post("/logout",[AuthController::class, "logout"]);
     Route::post("/users", [UserController::class, "create"]);
-    Route::get("/nuovapratica", [InfoCompanyController::class, "getCompanies"]);
-//Route::middleware('auth:api')->get('/user', function (Request $request) {
-    //return $request->user();
+    Route::get("/infocompany", [InfoCompanyController::class, "list"]);
+    Route::get("/infoconsultant", [InfoConsultantController::class, "list"]);
+    Route::get("/employee", [EmployeeController::class, "list"]);
+    Route::get("/diseaseform", [DiseaseFormController::class, "list"]);
 });

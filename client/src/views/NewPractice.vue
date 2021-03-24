@@ -523,8 +523,12 @@ export default {
   props: {},
   async mounted() {
     try {
-      let response = await this.$api.get("nuovapratica");
-      console.log(response.data);
+      let info_companies = await this.$api.get("/infocompany");
+      console.log(info_companies.data);
+      let info_consultants = await this.$api.get("/infoconsultant");
+      console.log(info_consultants.data);
+      let employees = await this.$api.get("/employee");
+      console.log(employees.data);
     } catch (e) {
       console.log(e);
     }

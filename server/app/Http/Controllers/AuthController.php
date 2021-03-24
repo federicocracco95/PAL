@@ -66,7 +66,7 @@ class AuthController extends Controller
             ->withCookie($cookie);
     }
 
-    public function resetPassword (Request $request) {
+    public function firstLoginChange (Request $request) {
         $request->validate([
             'email' => 'required|email',
             'password'=> 'required'
