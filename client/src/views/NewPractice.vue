@@ -603,13 +603,22 @@ export default {
         practice: this.newPractice
       };
 
+      let response;
+
       try {
-        await this.$api.post("/diseaseform", newPractise);
+        response = await this.$api.post("/diseaseform", newPractise);
       } catch (e) {
         this.errors = e.errors ? e.errors : [[e.message]];
       }
 
       this.isSaving = false;
+      
+      this.$router.push({
+        name: "practice_view",
+        params: {
+          id: response.data,
+        }
+      });
     }
   },
   computed: {

@@ -44,6 +44,6 @@ class DiseaseFormController extends Controller
 
         $newPracticeModel->save();
 
-        return response()->json($newPracticeModel, 201);
+        return response()->json($newPracticeModel->id, 201);
     }
 }
