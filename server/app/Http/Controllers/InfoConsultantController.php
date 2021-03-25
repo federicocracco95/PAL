@@ -15,7 +15,7 @@ class InfoConsultantController extends Controller
         try {
             
             $authUser = Auth::user();
-            $infoUser = User::where('username', $authUser["username"])->get()->toArray();
+            $infoUser = User::where('username', $authUser["username"])->get();
 
             //$infoConsultant = InfoConsultant::with('user')->where('id',1)->get();
 
@@ -34,13 +34,9 @@ class InfoConsultantController extends Controller
             if ($authUser['role'] == 'pa_user') {
             }
 
-            $data = $query->get()->toArray();
+            $data = $query->get();
 
-            return response()->json([
-                $data,
-                'message' => "InfoConsultant data retrived",
-                'status_code' => 200
-            ], 200);
+            return response()->json($data, 200);
             
         } catch (Exception $e) {
 

@@ -13,9 +13,9 @@ api.interceptors.response.use(
     response => {
         if (response.status === 200 || response.status === 201) {
             // console.log('Request passed throught interceptor!',response)
-            return Promise.resolve(response);
+            return Promise.resolve(response.data);
         } else {
-            return Promise.reject(response);
+            return Promise.reject(response.data);
         }
     },
     error => {

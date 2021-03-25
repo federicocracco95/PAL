@@ -1,13 +1,10 @@
 <template>
   <div id="nav-middle" class="bg-blue-800 p-20">
       <div class="container flex justify-around">
-            <router-link class="text-xl" to="/pratiche-effetuate">Pratica effetuata</router-link>
+            <router-link class="text-xl" to="/pratiche-effetuate">Pratica effettuata</router-link>
             <router-link class="text-xl" to="/pratiche-attesa">Pratica in attesa</router-link>
             <router-link class="text-xl" to="/nuovapratica">Nuova pratica</router-link> 
-
-
       </div>
-
   </div>
 </template>
 

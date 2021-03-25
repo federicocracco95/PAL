@@ -13,47 +13,6 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home,
-    meta: {
-      requiresAuth: true,
-    }
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
-  {
-    path: '/nuovapratica',
-    name: 'NuovaPratica',
-    component: NuovaPratica,
-  },
-  {
-    path: '/profile',
-    name: 'Profilo',
-    component: Profilo,
-  },
-  {
-    path: '/pratiche-effetuate',
-    name: 'PraticheEffetuate',
-    component: PraticheEffetuate,
-  },
-  {
-    path: '/crea-utente',
-    name: 'CreaUtente',
-    component: CreaUtente,
-  },
-  {
-    path: '/pratiche-attesa',
-    name: 'PraticheAttesa',
-    component: PraticheAttesa,
-  },
-  {
     path: '/login',
     name: 'Login',
     component: Login,
@@ -62,12 +21,47 @@ const routes = [
     },
   },
   {
-    path: '/modifica',
-    name: 'Modifica',
-    component: Modifica,
+    path: '/',
+    name: 'Home',
+    component: Home,
     meta: {
-      label: "Modifica",
+      requiresAuth: true,
     },
+    children: [
+      {
+        path: 'nuovapratica',
+        name: 'NuovaPratica',
+        component: NuovaPratica,
+      },
+      {
+        path: 'profile',
+        name: 'Profilo',
+        component: Profilo,
+      },
+      {
+        path: 'pratiche-effetuate',
+        name: 'PraticheEffetuate',
+        component: PraticheEffetuate,
+      },
+      {
+        path: 'crea-utente',
+        name: 'CreaUtente',
+        component: CreaUtente,
+      },
+      {
+        path: 'pratiche-attesa',
+        name: 'PraticheAttesa',
+        component: PraticheAttesa,
+      },
+      {
+        path: 'modifica',
+        name: 'Modifica',
+        component: Modifica,
+        meta: {
+          label: "Modifica",
+        },
+      }
+    ]
   }
 ]
 
