@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class DiseaseForm extends Model
 {
     use HasFactory;
+
+    public $guarded = [];
 }

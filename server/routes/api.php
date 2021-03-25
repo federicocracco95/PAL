@@ -34,4 +34,5 @@ Route::group(["middleware"=> "auth.api"],function(){
     Route::get("/infoconsultant", [InfoConsultantController::class, "list"]);
     Route::get("/employee", [EmployeeController::class, "list"]);
     Route::get("/diseaseform", [DiseaseFormController::class, "list"]);
+    Route::post("/diseaseform", [DiseaseFormController::class, "store"]);
 });
