@@ -225,9 +225,15 @@
                                     <span>08/19/14 07:57</span>
                                 </td>
                             </tr>
-                            
+                            <div>
+                                <li v-for="item in items" :key='item'>
+                                    {{ fatture }}
+                                </li>
+                            </div>
+                            <pre>{{fatture}}</pre>
                         </tbody>
                     </table>
+                    
                 </div>
             </div>
         </div>
@@ -235,3 +241,25 @@
     
   </div>
 </template>
+<script>
+export default {
+    data() {
+      return{
+        fatture:{
+            id: 1,
+            name: null,
+            cee_code: null,
+            created_at: null,
+            updated_at: null,
+            creator_id: null,
+            consultant_id: null
+        }
+    }
+  },
+   async mounted() {
+    let info_companies = await this.$api.get("/infocompany");
+    this.fatture = info_companies.data;
+  },
+    
+}
+</script>

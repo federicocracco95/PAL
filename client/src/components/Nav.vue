@@ -25,12 +25,6 @@ export default {
           roles: ["consultant", "pa", "company"]
         },
         {
-          path: "/about",
-          code: "about",
-          label: "About Us",
-          roles: ["consultant", "pa", "company"]
-        },
-        {
           path: "/login",
           code: "login",
           label: "Login",

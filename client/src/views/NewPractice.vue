@@ -242,11 +242,16 @@
           evento;
         </li>
       </ul>
-      <button
-        class="bg-blue-800 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center"
-      >
-        <span>Carica documenti</span>
-      </button>
+     
+      <form class="my-8" @submit.prevent="handleSubmit">
+            <div class="form-group ">
+                <input type="file" @change="uploadFile" multiple>
+            </div>
+
+            <div class="my-4 form-group">
+                <button class="bg-blue-800 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center">Carica documenti</button>
+            </div>
+        </form>
 
       <div class="mt-8 grid md:grid-cols-2 md:gap-2">
         <input
@@ -521,6 +526,11 @@
 export default {
   name: "NuovaPratica",
   props: {},
+  data () {
+    return {
+      files: null
+    }
+  },
   async mounted() {
     try {
       let info_companies = await this.$api.get("/infocompany");
@@ -532,7 +542,22 @@ export default {
     } catch (e) {
       console.log(e);
     }
-  }
+  },
+  methods: {
+        uploadFile (event) {
+        this.files = event.target.files
+        },
+        handleSubmit() {
+          const formData = new FormData();
+          for (const i of Object.keys(this.files)) {
+            formData.append('files', this.files[i])
+          }
+          //axios.post('http://localhost:4000/api/file-upload', formData, {
+          //}).then((res) => {
+            //console.log(res)
+          //})
+        }  
+    }
 };
 </script>
 
@@ -540,4 +565,5 @@ export default {
 ul {
   list-style-type: circle !important;
 }
+
 </style>
