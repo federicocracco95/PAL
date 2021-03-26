@@ -8,51 +8,11 @@ import Profilo from '../views/Modifica-profilo.vue'
 import PraticheEffetuate from '../views/PraticheEffetuate.vue'
 import PraticheAttesa from '../views/PraticheAttesa.vue'
 import CreaUtente from '../views/CreaUtente.vue'
+import NotFound from '../views/404.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home,
-    meta: {
-      requiresAuth: true,
-    }
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
-  {
-    path: '/nuovapratica',
-    name: 'NuovaPratica',
-    component: NuovaPratica,
-  },
-  {
-    path: '/profile',
-    name: 'Profilo',
-    component: Profilo,
-  },
-  {
-    path: '/pratiche-effetuate',
-    name: 'PraticheEffetuate',
-    component: PraticheEffetuate,
-  },
-  {
-    path: '/crea-utente',
-    name: 'CreaUtente',
-    component: CreaUtente,
-  },
-  {
-    path: '/pratiche-attesa',
-    name: 'PraticheAttesa',
-    component: PraticheAttesa,
-  },
   {
     path: '/login',
     name: 'Login',
@@ -62,11 +22,68 @@ const routes = [
     },
   },
   {
+    path: '/404',
+    name: 'Not Found',
+    component: NotFound,
+    meta: {
+      label: "Not Found",
+    },
+  },
+  {
+    path: '/',
+    name: 'Home',
+    component: Home,
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  {
+    path: '/nuovapratica',
+    name: 'NuovaPratica',
+    component: NuovaPratica,
+    meta: {
+      requiresAuth: true,
+    }
+  },
+  {
+    path: '/profile',
+    name: 'Profilo',
+    component: Profilo,
+    meta: {
+      requiresAuth: true,
+    }
+  },
+  {
+    path: '/pratiche-effetuate',
+    name: 'PraticheEffetuate',
+    component: PraticheEffetuate,
+    meta: {
+      requiresAuth: true,
+    }
+  },
+  {
+    path: '/crea-utente',
+    name: 'CreaUtente',
+    component: CreaUtente,
+    meta: {
+      requiresAuth: true,
+    }
+  },
+  {
+    path: '/pratiche-attesa',
+    name: 'PraticheAttesa',
+    component: PraticheAttesa,
+    meta: {
+      requiresAuth: true,
+    }
+  },
+  {
     path: '/modifica',
     name: 'Modifica',
     component: Modifica,
     meta: {
       label: "Modifica",
+      requiresAuth: true,
     },
   }
 ]

@@ -25,24 +25,12 @@ export default {
           roles: ["consultant", "pa", "company"]
         },
         {
-          path: "/about",
-          code: "about",
-          label: "About Us",
-          roles: ["consultant", "pa", "company"]
-        },
-        {
           path: "/login",
           code: "login",
           label: "Login",
           roles: ["consultant", "pa", "company"]
         },
-        {
-          path: "/",
-          code: "home",
-          label: "Home",
-          roles: ["consultant", "pa", "company"]
-        }
-      ]
+      ],
       //<router-link to="/about">About</router-link> |
       //<router-link to="/login">Login</router-link> |
       //<router-link to="/modifica">Modifica password</router-link> |

@@ -75,7 +75,7 @@ export default {
         });
 
         localStorage.setItem("user", JSON.stringify(res.data.logged_in_user));
-        this.$router.push("/");
+        this.$router.push("/pratiche-attesa");
       } catch (error) {
         this.error = "Username o password errate. Riprova.";
       }
@@ -95,4 +95,5 @@ export default {
     background-size: cover;
     background-position: center;
 }
+
 </style>

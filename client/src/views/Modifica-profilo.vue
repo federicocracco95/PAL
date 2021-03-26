@@ -17,14 +17,14 @@
 
             <div class="py-4 box-border h-1/2 w-1/2 ">
                 <div class=" md:gap-2"> 
-                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Nome"> 
-                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Cognome">
-                <div class="flex flex-row ">
-                    <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm " placeholder="nome.cognome@gmail.com  "> <i class="fas fa-pencil-alt self-center pl-2"></i>
-                </div>
-                <div class="flex flex-row ">
-                <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Password"> <i class="fas fa-pencil-alt self-center pl-2"></i>
-                </div>
+                    <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Nome"> 
+                    <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Cognome">
+                    <div class="flex flex-row ">
+                        <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm " placeholder="nome.cognome@gmail.com  "> <i class="fas fa-pencil-alt self-center pl-2"></i>
+                    </div>
+                    <div class="flex flex-row ">
+                        <input type="text" name="mail" class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm" placeholder="Password"> <i class="fas fa-pencil-alt self-center pl-2"></i>
+                    </div>
 
                 </div>
             </div>

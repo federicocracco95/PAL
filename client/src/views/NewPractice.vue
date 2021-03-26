@@ -580,6 +580,11 @@ export default {
     };
   },
   props: {},
+  data () {
+    return {
+      files: null
+    }
+  },
   async mounted() {
     this.isLoading = true;
 
@@ -645,4 +650,5 @@ export default {
 ul {
   list-style-type: circle !important;
 }
+
 </style>
