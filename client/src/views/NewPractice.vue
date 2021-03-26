@@ -185,6 +185,7 @@
           </div>
         </div>
         <div class="grid md:grid-cols-2 md:gap-2">
+          <!--
           <input
             type="text"
             name="trimester"
@@ -192,6 +193,15 @@
             class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Trimestre di riferimento"
           />
+          -->
+          <select
+            class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
+          >
+            <option :value="undefined">Trimestre di riferimento </option>
+            <option :value="undefined">Primo trimestre </option>
+            <option :value="undefined">Secondo trimestre </option>
+            <option :value="undefined">Terzo trimestre </option>
+          </select>
           <input
             type="text"
             name="weekly_working_hours"
@@ -211,7 +221,7 @@
             name="disease_hours"
             v-model="newPractice.disease_hours"
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
-            placeholder="Ore di malattia/infortunio"
+            placeholder="Ore di malattia"
           />
           <input
             type="text"
@@ -333,7 +343,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni non liquidati"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -341,7 +351,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni liquidati"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -349,7 +359,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Importo giornaliero richesto in rimborso"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -360,7 +370,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni non liquidati"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -368,7 +378,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni liquidati"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -376,7 +386,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Importo giornaliero richesto in rimborso"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -387,7 +397,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni non liquidati"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -395,7 +405,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni liquidati"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -403,7 +413,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Importo giornaliero richesto in rimborso"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -414,7 +424,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni non liquidati"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -422,7 +432,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni liquidati"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -430,7 +440,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Importo giornaliero richesto in rimborso"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -441,7 +451,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni non liquidati"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -449,7 +459,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni liquidati"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -457,7 +467,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Importo giornaliero richesto in rimborso"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -471,7 +481,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni non liquidati"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -479,7 +489,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni liquidati"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -487,7 +497,7 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Importo giornaliero richesto in rimborso"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />

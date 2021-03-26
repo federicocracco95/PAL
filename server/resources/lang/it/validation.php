@@ -146,7 +146,16 @@ return [
 
     'attributes' => [
         'practice.trimester' => "trimestre",
-        'practice.ordinary_work_hours' => "ore settimanali di lavoro"
+        'practice.ordinary_work_hours' => "Ore ordinarie di lavoro",
+        'practice.disease_hours' => "Ore di malattia",
+        'practice.weekly_working_hours' => "Ore settimanali di lavoro",
+        'practice.cig_hours' => "Ore di C.I.G.",
+        'practice.holidays_and_remunerated_permissions_hours' => "Ore per ferie e permessi retribuiti",
+        'practice.other_remunerated_hours' => "Altre retribuite",
+        'practice.total_hours' => "Totale ore trimestre",
+        'practice.disease_start_date' => "Periodo denunciato: Da",
+        'practice.disease_end_date' => "Periodo denunciato: A",
+        'practice.total_disease_days' => "Periodo denunciato: Giorni",
     ],
 
 ];
