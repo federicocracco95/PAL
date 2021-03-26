@@ -43,4 +43,5 @@ class DiseaseForm extends Model
     }
     
 
+    public $guarded = [];
 }

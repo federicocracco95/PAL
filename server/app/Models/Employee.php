@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     use HasFactory;
+
+    public $appends = [
+        "full_name",
+    ];
+
+    public function getFullNameAttribute() {
+        return $this->name . " " . $this->surname;
+    }
 }

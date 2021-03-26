@@ -13,7 +13,7 @@ class InfoConsultantController extends Controller
 {
     public function list(Request $req) {
         try {
-            
+
             $authUser = Auth::user();
             $infoUser = User::where('username', $authUser["username"])->get();
 
@@ -39,7 +39,6 @@ class InfoConsultantController extends Controller
             return response()->json($data, 200);
             
         } catch (Exception $e) {
-
             return response()->json([
                 'message' => "Error in retriving data through InfoConsultant",
                 'status_code' => 500

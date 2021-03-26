@@ -36,6 +36,7 @@ Route::group(["middleware"=> "auth.api"],function(){
     Route::get("/employee", [EmployeeController::class, "list"]);
     Route::get("/diseaseform", [DiseaseFormController::class, "list"]);
 
-    Route::post("/diseaseform", [DiseaseFormController::class, "create"]);
+    //Route::post("/diseaseform", [DiseaseFormController::class, "create"]);
     Route::put("/diseaseform/{id}", [DiseaseFormController::class, "edit"]);
+    Route::post("/diseaseform", [DiseaseFormController::class, "store"]);
 });
