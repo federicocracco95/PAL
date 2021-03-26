@@ -28,7 +28,8 @@ class DiseaseFormController extends Controller
 
         $validator = Validator::make($newPracticeData, [
             "practice.trimester" => "required",
-            "practice.ordinary_work_hours" => "required"
+            "practice.ordinary_work_hours" => "required",
+            "practice.disease_hours" => "required",
             // TODO: add field here
         ]);
 

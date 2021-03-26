@@ -6,7 +6,7 @@ import Modifica from '../views/Modifica-password.vue'
 import NuovaPratica from '../views/NewPractice.vue'
 import Profilo from '../views/Modifica-profilo.vue'
 import PraticheEffetuate from '../views/PraticheEffetuate.vue'
-import PraticheAttesa from '../views/PraticheAttesa.vue'
+import PraticheInviate from '../views/PraticheInviate.vue'
 import CreaUtente from '../views/CreaUtente.vue'
 import NotFound from '../views/404.vue'
 
@@ -70,9 +70,9 @@ const routes = [
     }
   },
   {
-    path: '/pratiche-attesa',
-    name: 'PraticheAttesa',
-    component: PraticheAttesa,
+    path: '/praticheinviate',
+    name: 'PraticheInviate',
+    component: PraticheInviate,
     meta: {
       requiresAuth: true,
     }
