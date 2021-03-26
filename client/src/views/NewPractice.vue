@@ -3,7 +3,7 @@
     <div v-if="!isLoading">
       <div class="flex justify-center my-8">
         <h2 class="uppercase text-2xl font-bold">
-          Modulo denuncia - richiesta rimborso malattia/infortunio
+          Modulo denuncia - richiesta rimborso malattia
         </h2>
       </div>
       <div class="flex justify-center mb-8">
@@ -222,7 +222,8 @@
           />
           <input
             type="text"
-            name="mail"
+            name="holidays_and_remunerated_permissions_hours"
+            v-model="newPractice.holidays_and_remunerated_permissions_hours"
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Ore per ferie e permessi retribuiti"
           />
@@ -565,6 +566,7 @@ export default {
   name: "NuovaPratica",
   data() {
     return {
+      files: null,
       companies: null,
       consultants: null,
       employees: null,

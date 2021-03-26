@@ -1,5 +1,5 @@
 <template>
-  <div class="praticheattesa">
+  <div class="praticheinviate">
 
     <div class="overflow-x-auto">
         <div class="flex m-4 items-center justify-center overflow-hidden">
@@ -47,7 +47,7 @@
 </template>
 <script>
 export default {
-  name: "PraticheAttesa",
+  name: "PraticheInviate",
   data() {
       return {
 

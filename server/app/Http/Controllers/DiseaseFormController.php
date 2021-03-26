@@ -10,9 +10,17 @@ use Illuminate\Support\Facades\Validator;
 
 class DiseaseFormController extends Controller
 {
-    public function get(Request $Request) {
-        $data = DB::table('projects')->limit(9)->get();
-        return $data;
+    public function list(Request $Request) {
+
+        return DiseaseForm::all();
+    }
+
+    public function create(Request $Request) {
+        
+    }
+
+    public function edit(Request $Request) {
+        
     }
 
     public function store(Request $request) {
@@ -20,7 +28,8 @@ class DiseaseFormController extends Controller
 
         $validator = Validator::make($newPracticeData, [
             "practice.trimester" => "required",
-            "practice.ordinary_work_hours" => "required"
+            "practice.ordinary_work_hours" => "required",
+            "practice.disease_hours" => "required",
             // TODO: add field here
         ]);
 
