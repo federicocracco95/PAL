@@ -196,11 +196,13 @@
           -->
           <select
             class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
+            v-model="newPractice.trimester"
           >
-            <option :value="undefined">Trimestre di riferimento </option>
-            <option :value="undefined">Primo trimestre </option>
-            <option :value="undefined">Secondo trimestre </option>
-            <option :value="undefined">Terzo trimestre </option>
+            <option :value="null" disabled>Trimestre di riferimento </option>
+            <option :value="1">Primo trimestre </option>
+            <option :value="2">Secondo trimestre </option>
+            <option :value="3">Terzo trimestre </option>
+            <option :value="4">Quarto trimestre </option>
           </select>
           <input
             type="text"
@@ -602,15 +604,19 @@ export default {
       selectedCompanyId: null,
       selectedEmployeeId: null,
       newPractice: {
-        weekly_working_hours: null,
+        extraprofessional_incident: "0",
+        car_crash: "0",
+        trimester: null,
         ordinary_work_hours: null,
-        disease_hours: null,
+        disease_hours: null,       
         cig_hours: null,
         holidays_and_remunerated_permissions_hours: null,
         other_remunerated_hours: null,
         total_hours: null,
-        car_crash: "0",
-        extraprofessional_incident: "1",
+        weekly_working_hours: null,
+        disease_start_date: null,
+        disease_end_date: null,
+        total_disease_days: null,
         days_not_cleared_1: null,
         days_cleared_1: null,
         daily_amount_1: null,
