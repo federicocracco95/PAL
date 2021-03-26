@@ -28,14 +28,8 @@ class InfoCompanyController extends Controller
 
             $data = $query->get();
 
-            return response()->json([
-                $data,
-                'message' => "InfoCompany data retrived",
-                'status_code' => 200
-            ], 200);
-
+            return response()->json($data, 200);
         } catch (Exception $e) {
-
             return response()->json([
                 'message' => "Error in retriving data through InfoCompany",
                 'status_code' => 500

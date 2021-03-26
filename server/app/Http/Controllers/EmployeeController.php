@@ -28,7 +28,7 @@ class EmployeeController extends Controller
                 $infoCompany = InfoCompany::get()->where('consultant_id', $infoConsultant['id']);
                 return $infoCompany; //da finire
                 //$query->where('company_id', $infoCompany[]);
-                
+
 
                 //$query->where('id',$infoUser[$authUser['id']-1]["info_consultant_id"])->first();
             }
@@ -37,14 +37,8 @@ class EmployeeController extends Controller
 
             $data = $query->get();
 
-            return response()->json([
-                $data,
-                'message' => "Employees data retrived",
-                'status_code' => 200
-            ], 200);
-
+            return response()->json($data, 200);
         } catch (Exception $e) {
-
             return response()->json([
                 'message' => "Error in retriving data through Employee",
                 'status_code' => 500

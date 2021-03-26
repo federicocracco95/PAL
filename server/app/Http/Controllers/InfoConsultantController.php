@@ -13,8 +13,11 @@ class InfoConsultantController extends Controller
 {
     public function list(Request $req) {
         try {
+
             $authUser = Auth::user();
-            $infoUser = User::get()->where('username',$authUser["username"]);
+            $infoUser = User::where('username', $authUser["username"])->get()->toArray();
+
+            //$infoConsultant = InfoConsultant::with('user')->where('id',1)->get();
 
             $query = InfoConsultant::query();
 
@@ -23,21 +26,18 @@ class InfoConsultantController extends Controller
                 $query->where('id',$infoCompany["consultant_id"])->first();
             }
             if ($authUser['role'] == 'consultant') {
-                $query->where('id',$infoUser[$authUser['id']-1]["info_consultant_id"])->first();
+                //$query->where('id',$infoUser[$authUser['id']-1]["info_consultant_id"])->first();
+                return $infoUser;
+                $query = InfoConsultant::with('user')->where('id',$infoUser['info_consultant_id'])->get();
+                return $query;
             }
             if ($authUser['role'] == 'pa_user') {
             }
 
-            $data = $query->get();
+            $data = $query->get()->toArray();
 
-            return response()->json([
-                $data,
-                'message' => "InfoConsultant data retrived",
-                'status_code' => 200
-            ], 200);
-
+            return response()->json($data, 200);
         } catch (Exception $e) {
-
             return response()->json([
                 'message' => "Error in retriving data through InfoConsultant",
                 'status_code' => 500
