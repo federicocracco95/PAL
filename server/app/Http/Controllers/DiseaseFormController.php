@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\DiseaseForm;
+use Exception;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,15 +13,28 @@ class DiseaseFormController extends Controller
 {
     public function list(Request $Request) {
 
-        return DiseaseForm::all();
+        try {
+            $data = DiseaseForm::get();
+            return response()->json($data, 200);
+        } catch (Exception $e) {
+            return response()->json([
+                'message' => "Error in listing all DiseaseForms",
+                'status_code' => 500
+            ], 500);
+        }
     }
 
-    public function create(Request $Request) {
-        
-    }
-
-    public function edit(Request $Request) {
-        
+    public function getForm(Request $Request, $id) {
+        try {
+            $data = DiseaseForm::where('id', $id);
+            return response()->json($data, 200);
+        } catch (Exception $e) {
+            return response()->json([
+                'message' => "Error in retreiving a specific DiseaseForm",
+                'status_code' => 500
+            ], 500);
+        }
+        return DiseaseForm::where('id', $id);
     }
 
     public function store(Request $request) {
@@ -54,5 +68,9 @@ class DiseaseFormController extends Controller
         $newPracticeModel->save();
 
         return response()->json($newPracticeModel->id, 201);
+    }
+
+    public function edit(Request $Request) {
+        
     }
 }

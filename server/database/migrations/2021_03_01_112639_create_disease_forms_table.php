@@ -47,7 +47,6 @@ class CreateDiseaseFormsTable extends Migration
             $table->integer('days_cleared_6')->nullable();
             $table->integer('daily_amount_6')->nullable();
             $table->integer('total_final')->nullable();
-
             $table->timestamps();
             $table->string('status');
         });

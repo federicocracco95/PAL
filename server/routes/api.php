@@ -7,7 +7,6 @@ use App\Http\Controllers\InfoConsultantController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\DiseaseFormController;
 use App\Http\Controllers\UserController;
-use App\Models\Employee;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,13 +29,18 @@ Route::post('/resetpassword',[AuthController::class,"firstLoginChange"]);
 Route::group(["middleware"=> "auth.api"],function(){
 
     Route::post("/logout",[AuthController::class, "logout"]);
-    //Route::post("/users", [UserController::class, "create"]);
-    Route::get("/infocompany", [InfoCompanyController::class, "list"]);
-    Route::get("/infoconsultant", [InfoConsultantController::class, "list"]);
-    Route::get("/employee", [EmployeeController::class, "list"]);
-    Route::get("/diseaseform", [DiseaseFormController::class, "list"]);
 
-    //Route::post("/diseaseform", [DiseaseFormController::class, "create"]);
-    Route::put("/diseaseform/{id}", [DiseaseFormController::class, "edit"]);
+    //Route::post("/users", [UserController::class, "create"]);
+
+    Route::get("/infocompany", [InfoCompanyController::class, "list"]);
+
+    Route::get("/infoconsultant", [InfoConsultantController::class, "list"]);
+
+    Route::get("/employee", [EmployeeController::class, "list"]);
+
+    Route::get("/diseaseform", [DiseaseFormController::class, "list"]);
+    Route::get("/diseaseform/{id}", [DiseaseFormController::class, "getForm"]);
     Route::post("/diseaseform", [DiseaseFormController::class, "store"]);
+    Route::put("/diseaseform/{id}", [DiseaseFormController::class, "edit"]);
+    
 });
