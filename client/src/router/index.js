@@ -76,6 +76,15 @@ const routes = [
     meta: {
       requiresAuth: true,
     }
+  },
+  {
+    path: '/modifica',
+    name: 'Modifica',
+    component: Modifica,
+    meta: {
+      label: "Modifica",
+      requiresAuth: true,
+    },
   }
 ]
 

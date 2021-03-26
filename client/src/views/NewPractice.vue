@@ -565,6 +565,7 @@ export default {
   name: "NuovaPratica",
   data() {
     return {
+      files: null,
       companies: null,
       consultants: null,
       employees: null,
@@ -580,11 +581,6 @@ export default {
     };
   },
   props: {},
-  data () {
-    return {
-      files: null
-    }
-  },
   async mounted() {
     this.isLoading = true;
 

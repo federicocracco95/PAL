@@ -73,8 +73,7 @@ export default {
           username: this.username,
           password: this.password,
         });
-
-        localStorage.setItem("user", JSON.stringify(res.data.logged_in_user));
+        localStorage.setItem("user", JSON.stringify(res.logged_in_user));
         this.$router.push("/pratiche-attesa");
       } catch (error) {
         this.error = "Username o password errate. Riprova.";
