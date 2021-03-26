@@ -14,33 +14,11 @@ class EmployeeController extends Controller
 {
     public function list(Request $req) {
         try {
-            $authUser = Auth::user();
-            $infoUser = User::get()->where('username',$authUser["username"]);
-
-            $query = Employee::query();
-
-            if ($authUser['role'] == 'company') {
-                $infoCompany = InfoCompany::get()->where('id', $infoUser[$authUser['id']-1]["info_company_id"])->first();
-                $query->where('id',$infoCompany["id"]);
-            }
-            if ($authUser['role'] == 'consultant') {
-                $infoConsultant = InfoConsultant::get()->where('id', $infoUser[$authUser['id']-1]["info_consultant_id"])->first();
-                $infoCompany = InfoCompany::get()->where('consultant_id', $infoConsultant['id']);
-                return $infoCompany; //da finire
-                //$query->where('company_id', $infoCompany[]);
-
-
-                //$query->where('id',$infoUser[$authUser['id']-1]["info_consultant_id"])->first();
-            }
-            if ($authUser['role'] == 'pa_user') {
-            }
-
-            $data = $query->get();
-
+            $data = Employee::get();
             return response()->json($data, 200);
         } catch (Exception $e) {
             return response()->json([
-                'message' => "Error in retriving data through Employee",
+                'message' => "Error in listing all Employees",
                 'status_code' => 500
             ], 500);
         }
