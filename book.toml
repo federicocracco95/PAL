@@ -1,0 +1,6 @@
+[book]
+authors = ["Giovanni"]
+language = "it"
+multilingual = true
+src = "src"
+title = "Pragma_Documentation"

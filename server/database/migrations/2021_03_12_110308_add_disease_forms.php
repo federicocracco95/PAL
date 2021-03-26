@@ -32,6 +32,10 @@ class AddDiseaseForms extends Migration
             $newdisease_forms->disease_end_date = "12/3/2021";
             $newdisease_forms->total_disease_days = "3";
             $newdisease_forms->status = "in progress";
+            $newdisease_forms->days_not_cleared_3 = "3";
+            $newdisease_forms->days_cleared_3 = "15";
+            $newdisease_forms->daily_amount_3 = "90";
+            $newdisease_forms->total_final = "1350";
 
             $newdisease_forms->save();
 
@@ -51,6 +55,10 @@ class AddDiseaseForms extends Migration
             $newdisease_forms->disease_end_date = "29/2/2020";
             $newdisease_forms->total_disease_days = "10";
             $newdisease_forms->status = "completed";
+            $newdisease_forms->days_not_cleared_2 = "3";
+            $newdisease_forms->days_cleared_2 = "7";
+            $newdisease_forms->daily_amount_2 = "80";
+            $newdisease_forms->total_final = "560";
 
             $newdisease_forms->save();
 
