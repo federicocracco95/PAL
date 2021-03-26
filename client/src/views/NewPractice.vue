@@ -344,6 +344,7 @@
                 <input
                   type="text"
                   name="Giorni non liquidati"
+                  v-model="newPractice.days_not_cleared_1"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -352,6 +353,7 @@
                 <input
                   type="text"
                   name="Giorni liquidati"
+                  v-model="newPractice.days_cleared_1"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -360,6 +362,7 @@
                 <input
                   type="text"
                   name="Importo giornaliero richesto in rimborso"
+                  v-model="newPractice.daily_amount_1"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -371,6 +374,7 @@
                 <input
                   type="text"
                   name="Giorni non liquidati"
+                  v-model="newPractice.days_not_cleared_2"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -379,6 +383,7 @@
                 <input
                   type="text"
                   name="Giorni liquidati"
+                  v-model="newPractice.days_cleared_2"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -387,6 +392,7 @@
                 <input
                   type="text"
                   name="Importo giornaliero richesto in rimborso"
+                  v-model="newPractice.daily_amount_2"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -398,6 +404,7 @@
                 <input
                   type="text"
                   name="Giorni non liquidati"
+                  v-model="newPractice.days_not_cleared_3"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -406,6 +413,7 @@
                 <input
                   type="text"
                   name="Giorni liquidati"
+                  v-model="newPractice.days_cleared_3"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -414,6 +422,7 @@
                 <input
                   type="text"
                   name="Importo giornaliero richesto in rimborso"
+                  v-model="newPractice.daily_amount_3 "
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -425,6 +434,7 @@
                 <input
                   type="text"
                   name="Giorni non liquidati"
+                  v-model="newPractice.days_not_cleared_4"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -433,6 +443,7 @@
                 <input
                   type="text"
                   name="Giorni liquidati"
+                  v-model="newPractice.days_cleared_4"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -441,6 +452,7 @@
                 <input
                   type="text"
                   name="Importo giornaliero richesto in rimborso"
+                  v-model="newPractice.daily_amount_4"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -452,6 +464,7 @@
                 <input
                   type="text"
                   name="Giorni non liquidati"
+                  v-model="newPractice.days_not_cleared_5"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -460,6 +473,7 @@
                 <input
                   type="text"
                   name="Giorni liquidati"
+                  v-model="newPractice.days_cleared_5"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -468,6 +482,7 @@
                 <input
                   type="text"
                   name="Importo giornaliero richesto in rimborso"
+                  v-model="newPractice.daily_amount_5"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -482,6 +497,7 @@
                 <input
                   type="text"
                   name="Giorni non liquidati"
+                  v-model="newPractice.days_not_cleared_6"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -490,6 +506,7 @@
                 <input
                   type="text"
                   name="Giorni liquidati"
+                  v-model="newPractice.days_cleared_6"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -498,6 +515,7 @@
                 <input
                   type="text"
                   name="Importo giornaliero richesto in rimborso"
+                  v-model="newPractice.daily_amount_6"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -512,7 +530,8 @@
           <div class="w-1/2 mr-4">
             <input
               type="text"
-              name="mail"
+              name="Totale ore"
+              v-model="newPractice.total_final"
               class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
               placeholder="Da"
             />
@@ -583,8 +602,34 @@ export default {
       selectedCompanyId: null,
       selectedEmployeeId: null,
       newPractice: {
+        weekly_working_hours: null,
+        ordinary_work_hours: null,
+        disease_hours: null,
+        cig_hours: null,
+        holidays_and_remunerated_permissions_hours: null,
+        other_remunerated_hours: null,
+        total_hours: null,
         car_crash: "0",
-        extraprofessional_incident: "1"
+        extraprofessional_incident: "1",
+        days_not_cleared_1: null,
+        days_cleared_1: null,
+        daily_amount_1: null,
+        days_not_cleared_2: null,
+        days_cleared_2: null,
+        daily_amount_2: null,
+        days_not_cleared_3: null,
+        days_cleared_3: null,
+        daily_amount_3: null,
+        days_not_cleared_4: null,
+        days_cleared_4: null,
+        daily_amount_4: null,
+        days_not_cleared_5: null,
+        days_cleared_5: null,
+        daily_amount_5: null,
+        days_not_cleared_6: null,
+        days_cleared_6: null,
+        daily_amount_6: null,
+        total_final: null
       },
       errors: null,
       isSaving: false,
