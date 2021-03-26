@@ -28,6 +28,26 @@ class CreateDiseaseFormsTable extends Migration
             $table->string('disease_start_date');
             $table->string('disease_end_date');
             $table->string('total_disease_days');
+            $table->integer('days_not_cleared_1')->nullable();
+            $table->integer('days_cleared_1')->nullable();
+            $table->integer('daily_amount_1')->nullable();
+            $table->integer('days_not_cleared_2')->nullable();
+            $table->integer('days_cleared_2')->nullable();
+            $table->integer('daily_amount_2')->nullable();
+            $table->integer('days_not_cleared_3')->nullable();
+            $table->integer('days_cleared_3')->nullable();
+            $table->integer('daily_amount_3')->nullable();
+            $table->integer('days_not_cleared_4')->nullable();
+            $table->integer('days_cleared_4')->nullable();
+            $table->integer('daily_amount_4')->nullable();
+            $table->integer('days_not_cleared_5')->nullable();
+            $table->integer('days_cleared_5')->nullable();
+            $table->integer('daily_amount_5')->nullable();
+            $table->integer('days_not_cleared_6')->nullable();
+            $table->integer('days_cleared_6')->nullable();
+            $table->integer('daily_amount_6')->nullable();
+            $table->integer('total_final')->nullable();
+
             $table->timestamps();
             $table->string('status');
         });
