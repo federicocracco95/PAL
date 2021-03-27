@@ -22,7 +22,7 @@ class AddUsersToUsers extends Migration
 
             $newUser->username = "darocrife";
             $newUser->email = "daro@gmail.com";
-            $newUser->password = Hash::make("darocrife");
+            $newUser->password = Hash::make("password");
             $newUser->role = "pa_user";
             $newUser->info_consultant_id = NULL;
             $newUser->info_company_id = NULL;

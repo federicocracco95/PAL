@@ -25,8 +25,8 @@ class Employee extends Model
             switch ($authUser['role']) {
                 case 'consultant':
                     $consultant = InfoConsultant::where('id', $authUser['info_consultant_id'])->first();
-                    $company = InfoCompany::where('consultant_id', $consultant->id);
-                    $builder->where("company_id", $company->id);
+                    $company = InfoCompany::where('consultant_id', $consultant->id)->pluck("id");
+                    $builder->whereIn('company_id', $company);
                     break;
                 case 'company':
                     $company = InfoCompany::where('id', $authUser['info_company_id'])->first();
