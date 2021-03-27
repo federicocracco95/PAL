@@ -28,7 +28,7 @@ class InfoCompany extends Model
                     $builder->where("consultant_id", $consultant->id);
                     break;
                 case 'company':
-                    $builder->where("id", $authUser['info_company_id'])->first();
+                    $builder->where("id", $authUser['info_company_id']);
                     break;
             }
 
