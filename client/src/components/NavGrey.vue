@@ -30,7 +30,12 @@
                         </div>
                       </div>
                       <div class="mx-4 capitalize text-white">
-                        <span>{{user.username}}</span>
+                        <div>
+                          <span>{{user.username}}</span>
+                        </div>
+                        <div>
+                          <span>{{role}}</span>
+                        </div>
                       </div>
                   </div>
                 </div>
@@ -56,11 +61,21 @@ export default {
       user:{
         username: null,
         },
+        role: null,
     };
   },
-  mounted() {
+  async mounted() {
       
       this.user = JSON.parse(localStorage.getItem("user"));
+
+      if(this.user.role == 'pa_user') {
+        this.role = 'Amministratore';
+      } else if (this.user.role == 'consultant') {
+        this.role = 'Consulente';
+      } else if (this.user.role == 'company') {
+        this.role = 'Compagnia';
+      }
+
   },
   methods: {
     async logout() {
