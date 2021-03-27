@@ -37,9 +37,9 @@ class DiseaseForm extends Model
         });
     }
 
-    public function user()
+    public function employee()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasMany(Employee::class,'id');
     }
     
 

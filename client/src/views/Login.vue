@@ -63,6 +63,7 @@ export default {
       username: null,
       password: null,
       error: null,
+      user: null,
     };
   },
   mounted() {},
@@ -74,9 +75,18 @@ export default {
           password: this.password,
         });
         localStorage.setItem("user", JSON.stringify(res.logged_in_user));
+        this.user = JSON.parse(localStorage.getItem("user"));
+        if (!this.user['first_time_login']) {
         this.$router.push("/praticheinviate");
+      }
+        this.$router.push("/modifica");
       } catch (error) {
         this.error = "Username o password errate. Riprova.";
+      }
+      if (this.user['first_time_login']) {
+        this.$router.push("/modifica");
+      } else {
+        this.$router.push("/praticheinviate");
       }
     },
 

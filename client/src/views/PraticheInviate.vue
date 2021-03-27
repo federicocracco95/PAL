@@ -12,28 +12,41 @@
                                 <th class="py-3 px-6 text-left">Cognome</th>
                                 <th class="py-3 px-6 text-left">Nome</th>
                                 <th class="py-3 px-6 text-center">Data Pratica</th>
+                                <th class="py-3 px-6 text-center">Dettaglio</th>
                             </tr>
                         </thead>
-                        <tbody class="text-gray-600 text-sm font-light">
-                            <!-- riga 1 -->
-                            <tr class="border-b border-gray-200 hover:bg-gray-100">
+                        <tbody class="text-gray-600 text-sm font-light"
+                            v-for="form in forms"
+                            :key="form.id" >
+                            <tr class="border-b border-gray-200 hover:bg-gray-100"
+                                v-for="data in form.employee"
+                                :key="data.id"
+                            >
                                 <td class="py-3 px-6 text-left">
                                     <div class="flex items-center">
-                                        <span>2345670r3289</span>
+                                        <span>{{form.id}}</span>
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-left">
                                     <div class="flex items-center">
-                                        <span>Mario</span>
+                                        <span>{{data.surname}}</span>
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-left">
                                     <div class="flex items-center">
-                                        <span>Rossi</span>
+                                        <span>{{data.name}}</span>
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-center">
-                                    <span>29/04/2020 17:57</span>
+                                    <span>{{form.created_at.slice(0,10)}} {{form.created_at.slice(11,16)}}</span>
+                                </td>
+                                <td class="py-3 px-6 text-center">
+                                        <button 
+                                        class="bg-blue-800 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center justify-center"
+                                        @click="dettaglio(form.id)"
+                                        >
+                                            <span>Vai</span>
+                                        </button>
                                 </td>
                             </tr>
                         </tbody>
@@ -50,24 +63,33 @@ export default {
   name: "PraticheInviate",
   data() {
       return {
-
+          forms: [
+              
+          ],
+              
+              
+          
       };
   },
   props: {},
   async mounted() {
     try {
-      let info_companies = await this.$api.get("/infocompany");
-      console.log(info_companies.data);
-      let info_consultants = await this.$api.get("/infoconsultant");
-      console.log(info_consultants.data);
-      let employees = await this.$api.get("/employee");
-      console.log(employees.data);
+      this.forms = await this.$api.get("/diseaseform");
+      console.log(this.forms);
     } catch (e) {
       console.log(e);
     }
   },
   methods: {
-    
+      
+    dettaglio(praticaId) {
+        this.$router.push({
+            name: "DettaglioPratica",
+            params: {
+                id: praticaId,
+            }
+        });
+    }
   },
 };
 </script>

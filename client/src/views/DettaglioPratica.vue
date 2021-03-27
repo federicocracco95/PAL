@@ -1,67 +1,11 @@
 <template>
   <div class="newpractive m-8">
-    <div v-if="!isLoading">
       <div class="flex justify-center my-8">
         <h2 class="uppercase text-2xl font-bold">
           Modulo denuncia - richiesta rimborso malattia
         </h2>
       </div>
-      <div class="flex justify-center mb-8">
-        <div class="relative inline-flex m-4">
-          <svg
-            class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 412 232"
-          >
-            <path
-              d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
-              fill="#648299"
-              fill-rule="nonzero"
-            />
-          </svg>
-          <select
-            v-model="selectedCompanyId"
-            class="border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
-          >
-            <option :value="undefined">Seleziona Azienda</option>
-            <option
-              v-for="company in companies"
-              :key="company.id"
-              :value="company.id"
-              >{{ company.name }}</option
-            >
-          </select>
-        </div>
-        <div
-          v-if="selectedCompany != undefined"
-          class="relative inline-flex m-4"
-        >
-          <svg
-            class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 412 232"
-          >
-            <path
-              d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
-              fill="#648299"
-              fill-rule="nonzero"
-            />
-          </svg>
-          <select
-            v-model="selectedEmployeeId"
-            class="border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
-          >
-            <option>Seleziona Dipendente</option>
-            <option
-              v-for="employee in companyEmployees"
-              :key="employee.id"
-              :value="employee.id"
-              >{{ employee.full_name }}</option
-            >
-          </select>
-        </div>
-      </div>
-      <div class="container mx-auto px-10" v-if="selectedEmployee">
+      <div class="container mx-auto px-10">
         <div class="grid md:grid-cols-2 md:gap-2">
           <input
             type="text"
@@ -508,62 +452,13 @@
             />
           </div>
         </div>
-
-        <h3 class="text-lg font-bold py-2">
-          Il sottoscritto legale rappresentante, consapevole delle
-          responsabilità penali (art. 640 C.P.), DICHIARA:
-        </h3>
-        <ul class="px-4 mb-6">
-          <li>
-            di aver corrisposto integralmente al lavoratore beneficiario il
-            trattamento chiesto in rimborso con la presente domanda;
-          </li>
-          <li>
-            che i dati esposti nella presente domanda sono conformi alla verità
-            ed alle registrazioni dei libri paga e matricola;
-          </li>
-          <li>
-            di osservare ed applicare integralmente il vigente C.C.N.L. per gli
-            operai dipendenti dalle imprese edili ed affini, unitamente agli
-            accordi locali integrativi, nonché lo statuto della Cassa Edile
-            della Provincia di Trento.
-          </li>
-        </ul>
-        <div class="flex items-center">
-          <button
-            @click="save()"
-            :disabled="isSaving"
-            :class="{
-              'bg-blue-800 cursor-pointer': !isSaving,
-              'bg-blue-100 cursor-not-allowed': isSaving
-            }"
-            class="outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center mr-3"
-          >
-            {{ isSaving ? "Salvando..." : "Salva Documento" }}
-          </button>
-          <div v-if="errors" class="text-red-500 font-bold flex-col">
-            <span v-for="e in errors" class="flex items-center" :key="e">
-              <span class="w-1 h-1 mr-1 block bg-red-500 rounded-full"></span
-              >{{ e[0] }}
-            </span>
-          </div>
-          <button
-            class="bg-gray-400 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center ml-auto"
-          >
-            <span>Genera pdf</span>
-          </button>
-        </div>
       </div>
-    </div>
-    <div v-if="isLoading" class="p-5 text-center font-bold text-gray-500">
-      Caricamento...
-    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "NuovaPratica",
+  name: "DettaglioPratica",
   data() {
     return {
       files: null,
@@ -577,13 +472,10 @@ export default {
         extraprofessional_incident: "1"
       },
       errors: null,
-      isSaving: false,
-      isLoading: true
     };
   },
   props: {},
   async mounted() {
-    this.isLoading = true;
 
     try {
       this.companies = await this.$api.get("/infocompany");
@@ -592,53 +484,13 @@ export default {
       console.log(e);
     }
 
-    this.isLoading = false;
+    
   },
   methods: {
-    async save() {
-      this.errors = null;
-      this.isSaving = true;
-
-      let newPractise = {
-        employee: this.selectedEmployee,
-        company: this.selectedCompany,
-        practice: this.newPractice
-      };
-
-      let response;
-
-      try {
-        response = await this.$api.post("/diseaseform", newPractise);
-      } catch (e) {
-        this.errors = e.errors ? e.errors : [[e.message]];
-      }
-
-      this.isSaving = false;
-      
-      this.$router.push({
-        name: "PraticheInviate",
-        params: {
-          id: response.data,
-        }
-      });
-    }
+    
   },
   computed: {
-    companyEmployees() {
-      return this.employees.filter(
-        employee => employee.company_id == this.selectedCompanyId
-      );
-    },
-    selectedEmployee() {
-      return this.employees.find(
-        employee => employee.id == this.selectedEmployeeId
-      );
-    },
-    selectedCompany() {
-      return this.companies.find(
-        company => company.id == this.selectedCompanyId
-      );
-    }
+
   }
 };
 </script>

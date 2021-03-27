@@ -7,6 +7,7 @@ import NuovaPratica from '../views/NewPractice.vue'
 import Profilo from '../views/Modifica-profilo.vue'
 import PraticheEffetuate from '../views/PraticheEffetuate.vue'
 import PraticheInviate from '../views/PraticheInviate.vue'
+import DettaglioPratica from '../views/DettaglioPratica.vue'
 import CreaUtente from '../views/CreaUtente.vue'
 import NotFound from '../views/404.vue'
 
@@ -73,6 +74,14 @@ const routes = [
     path: '/praticheinviate',
     name: 'PraticheInviate',
     component: PraticheInviate,
+    meta: {
+      requiresAuth: true,
+    }
+  },
+  {
+    path: '/pratica/{id}',
+    name: 'DettaglioPratica',
+    component: DettaglioPratica,
     meta: {
       requiresAuth: true,
     }

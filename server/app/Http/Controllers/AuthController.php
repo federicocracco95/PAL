@@ -73,7 +73,6 @@ class AuthController extends Controller
         ]);
 
         $user = User::where('email', $request->email)
-            ->where('username', $request->username)
             ->first();
         if(!$user) {
             return response()->json([
@@ -83,12 +82,20 @@ class AuthController extends Controller
             ], 401);
         } else {
             $user->password = Hash::make($request->newPassword);
-
+            
             if($user->save()) {
+                $user = Auth::user();
+
+                if ($user['first_time_login'] == 1) {
+                    $userInfo = User::where('email', $user['email']);
+                
+                    $userInfo->update(['first_time_login' => FALSE]);
+                }
                 return response()->json([
                     'message' => "Password aggiornata",
                     'status_code' => 200
                 ], 200);
+
             } else {
                 return response()->json([
                     'message' => "  Errore nel salvataggio",

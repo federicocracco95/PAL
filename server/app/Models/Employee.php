@@ -45,4 +45,8 @@ class Employee extends Model
     public function getFullNameAttribute() {
         return $this->name . " " . $this->surname;
     }
+
+    public function diaseaseform() {
+        return $this->hasOne(DiseaseForm::class,'id');
+    }
 }

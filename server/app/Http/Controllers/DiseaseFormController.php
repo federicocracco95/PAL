@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\DiseaseForm;
+use App\Models\Employee;
 use Exception;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class DiseaseFormController extends Controller
     public function list(Request $Request) {
 
         try {
-            $data = DiseaseForm::get();
+            $data = DiseaseForm::with('employee')->get();
             return response()->json($data, 200);
         } catch (Exception $e) {
             return response()->json([

@@ -21,14 +21,13 @@ use App\Http\Controllers\UserController;
 
 // auth api
 Route::post("/login",[AuthController::class,"login"]);
-Route::post('/resetpassword',[AuthController::class,"firstLoginChange"]);
-
-
 
 // authentication required api
 Route::group(["middleware"=> "auth.api"],function(){
 
     Route::post("/logout",[AuthController::class, "logout"]);
+
+    Route::post('/resetpassword',[AuthController::class,"firstLoginChange"]);
 
     //Route::post("/users", [UserController::class, "create"]);
 

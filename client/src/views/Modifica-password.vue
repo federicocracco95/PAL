@@ -32,7 +32,7 @@
                   type="password"
                   name="password"
                   id="password"
-                  placeholder="Password"
+                  placeholder="Nuova Password"
                   class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
                   v-model="newPassword"
                   @focus="resetError()"
@@ -43,7 +43,7 @@
                   type="password"
                   name="password"
                   id="password"
-                  placeholder="Password"
+                  placeholder="Conferma Password"
                   class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
                   v-model="confirmNewPassword"
                   @focus="resetError()"
@@ -54,11 +54,13 @@
                   @click="resetPassword()"
                   class="w-full rounded-full px-3 py-4 text-white bg-blue-900 rounded-md focus:bg-indigo-600 focus:outline-none"
                 >
-                  Accedi
+                  Invia
                 </button>
               </div>
             </form>
-            {{error}}
+            <div class="m-7 text-center">
+              {{error}}
+            </div>
           </div>
         </div>
       </div>
@@ -75,10 +77,15 @@ export default {
       user: null,
       newPassword: null,
       confirmNewPassword: null,
+      error: null,
     };
   },
-  mounted() {
+  async mounted() {
       this.user = JSON.parse(localStorage.getItem("user"));
+
+      if (!this.user['first_time_login']) {
+        this.$router.push("/praticheinviate");
+      }
   },
   methods: {
     async resetPassword() {
@@ -90,6 +97,8 @@ export default {
             password: this.oldPassword,
             newPassword: this.newPassword
             });
+            this.$router.push("/praticheinviate");
+            
         } catch (error) {
             this.error = "Errore nell'invio";
         }
