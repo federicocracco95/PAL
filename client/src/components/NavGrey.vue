@@ -10,7 +10,7 @@
                           <span class="uppercase text-white font-bold text-3xl">Edile</span>
                       </div>
                       <div>
-                          <span class="text-white">della provincia autonoma di trento</span>
+                          <span class="text-white">della Provincia Autonoma di Trento</span>
                       </div>
                   </div>   
                     
