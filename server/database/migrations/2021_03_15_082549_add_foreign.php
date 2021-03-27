@@ -22,7 +22,7 @@ class AddForeign extends Migration
 
             $fillUser = User::where('id', 2)->first();
 
-            $fillUser->info_consultant_id = 1;
+            
             $fillUser->info_company_id = 1;
 
             $fillUser->save();
@@ -30,7 +30,7 @@ class AddForeign extends Migration
             $fillUser = User::where('id', 3)->first();
 
             $fillUser->info_consultant_id = 2;
-            $fillUser->info_company_id = 2;
+            
 
             $fillUser->save();
         });
