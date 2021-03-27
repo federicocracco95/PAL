@@ -1,7 +1,8 @@
 <template>
   <div class=" m-8">
-      <div class="flex justify-center my-8">
-        <h2 class="uppercase text-2xl font-bold">
+      <div class="justify-center my-8 text-center">
+        <h1 class="uppercase text-2xl font-bold mb-4">Dettaglio Pratica</h1>
+          <h2 class="uppercase text-2l font-bold">
           Modulo denuncia - richiesta rimborso malattia
         </h2>
       </div>
