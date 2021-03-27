@@ -1,5 +1,5 @@
 <template>
-  <div class="newpractive m-8">
+  <div class=" m-8">
       <div class="flex justify-center my-8">
         <h2 class="uppercase text-2xl font-bold">
           Modulo denuncia - richiesta rimborso malattia
@@ -7,73 +7,73 @@
       </div>
       <div class="container mx-auto px-10">
         <div class="grid md:grid-cols-2 md:gap-2">
-          <input
+          <span
             type="text"
             name="company"
-            v-model="selectedCompany.name"
+            
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
-            placeholder="Ditta"
+            value="Ditta"
           />
-          <input
+          <span
             type="text"
             name="cee_code"
-            v-model="selectedCompany.cee_code"
+            
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Codice C.E."
           />
           <input
             type="text"
             name="full_name"
-            v-model="selectedEmployee.full_name"
+            
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Al Signor"
           />
           <input
             type="text"
             name="birth_date"
-            v-model="selectedEmployee.birth_date"
+            
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Nato il"
           />
           <input
             type="text"
             name="residence"
-            v-model="selectedEmployee.residence"
+            
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Residente a"
           />
           <input
             type="text"
             name="province"
-            v-model="selectedEmployee.province"
+            
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Prov."
           />
           <input
             type="text"
             name="cap"
-            v-model="selectedEmployee.cap"
+            
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Cap"
           />
           <input
             type="text"
             name="position"
-            v-model="selectedEmployee.position"
+            
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Qualifica"
           />
           <input
             type="text"
             name="salary"
-            v-model="selectedEmployee.salary"
+            
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Paga oraria"
           />
           <input
             type="text"
             name="hire_date"
-            v-model="selectedEmployee.hire_date"
+            
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Data assunzione"
           />
@@ -85,7 +85,7 @@
             >
             <label class="inline-flex items-center">
               <input
-                v-model="newPractice.extraprofessional_incident"
+                
                 type="radio"
                 class="form-radio"
                 name="extraprofessional_incident"
@@ -96,7 +96,7 @@
             <label class="inline-flex items-center ml-6">
               <input
                 type="radio"
-                v-model="newPractice.extraprofessional_incident"
+                
                 class="form-radio"
                 name="extraprofessional_incident"
                 value="0"
@@ -108,7 +108,7 @@
             <span class="text-gray-700 mx-2 my-4">Incidente stradale</span>
             <label class="inline-flex items-center">
               <input
-                v-model="newPractice.car_crash"
+                
                 type="radio"
                 class="form-radio"
                 name="car_crash"
@@ -119,7 +119,7 @@
             <label class="inline-flex items-center ml-6">
               <input
                 type="radio"
-                v-model="newPractice.car_crash"
+               
                 class="form-radio"
                 name="accountType"
                 value="0"
@@ -132,56 +132,56 @@
           <input
             type="text"
             name="trimester"
-            v-model="newPractice.trimester"
+            
             class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Trimestre di riferimento"
           />
           <input
             type="text"
             name="weekly_working_hours"
-            v-model="newPractice.weekly_working_hours"
+            
             class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Ore settimanali di lavoro"
           />
           <input
             type="text"
             name="ordinary_work_hours"
-            v-model="newPractice.ordinary_work_hours"
+          
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Ore ordinarie di lavoro"
           />
           <input
             type="text"
             name="disease_hours"
-            v-model="newPractice.disease_hours"
+           
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Ore di malattia/infortunio"
           />
           <input
             type="text"
             name="cig_hours"
-            v-model="newPractice.cig_hours"
+           
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Ore di C.I.G."
           />
           <input
             type="text"
             name="holidays_and_remunerated_permissions_hours"
-            v-model="newPractice.holidays_and_remunerated_permissions_hours"
+            
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Ore per ferie e permessi retribuiti"
           />
           <input
             type="text"
             name="other_remunerated_hours"
-            v-model="newPractice.other_remunerated_hours"
+            
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Altre retribuite"
           />
           <input
             type="text"
             name="total_hours"
-            v-model="newPractice.total_hours"
+          
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Totale ore trimestre"
           />
@@ -189,7 +189,7 @@
         <input
           type="text"
           name="holidays_and_remunerated_permissions_hours"
-          v-model="newPractice.holidays_and_remunerated_permissions_hours"
+        
           class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
           placeholder="Orario settimanale applicato nel periodo denunciato: ore"
         />
@@ -223,14 +223,14 @@
           <input
             type="text"
             name="full_name"
-            v-model="selectedEmployee.full_name"
+           
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Signor"
           />
           <input
             type="text"
             name="birth_date"
-            v-model="selectedEmployee.birth_date"
+           
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Nato il"
           />
@@ -242,21 +242,21 @@
           <input
             type="text"
             name="disease_start_date"
-            v-model="newPractice.disease_start_date"
+           
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Da"
           />
           <input
             type="text"
             name="disease_end_date"
-            v-model="newPractice.disease_end_date"
+         
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="A"
           />
           <input
             type="text"
             name="total_disease_days"
-            v-model="newPractice.total_disease_days"
+       
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="= Giorni"
           />
@@ -453,6 +453,7 @@
           </div>
         </div>
       </div>
+      <pre>{{form}}</pre>
   </div>
 </template>
 
@@ -461,31 +462,17 @@ export default {
   name: "DettaglioPratica",
   data() {
     return {
-      files: null,
-      companies: null,
-      consultants: null,
-      employees: null,
-      selectedCompanyId: null,
-      selectedEmployeeId: null,
-      newPractice: {
-        car_crash: "0",
-        extraprofessional_incident: "1"
-      },
+      form: [],
       errors: null,
+      id: this.$route.params.id,
     };
   },
   props: {},
   async mounted() {
+    const res = await this.$api.get(`/diseaseform/${this.id}`);
+    this.form = res[0];
+    },
 
-    try {
-      this.companies = await this.$api.get("/infocompany");
-      this.employees = await this.$api.get("/employee");
-    } catch (e) {
-      console.log(e);
-    }
-
-    
-  },
   methods: {
     
   },

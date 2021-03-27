@@ -41,6 +41,11 @@ class DiseaseForm extends Model
     {
         return $this->hasMany(Employee::class,'id');
     }
+
+    public function company()
+    {
+        return $this->hasOne(Employee::class,'id');
+    }
     
 
     public $guarded = [];

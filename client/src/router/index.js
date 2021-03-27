@@ -10,7 +10,7 @@ import PraticheInviate from '../views/PraticheInviate.vue'
 import DettaglioPratica from '../views/DettaglioPratica.vue'
 import CreaUtente from '../views/CreaUtente.vue'
 import NotFound from '../views/404.vue'
-import DettaglioPratica from '../views/DettaglioPratica.vue'
+
 
 Vue.use(VueRouter)
 
@@ -88,7 +88,7 @@ const routes = [
     }
   },
   {
-    path: '/pratica/{id}',
+    path: '/pratica/',
     name: 'DettaglioPratica',
     component: DettaglioPratica,
     meta: {

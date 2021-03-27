@@ -27,7 +27,8 @@ class DiseaseFormController extends Controller
 
     public function getForm(Request $Request, $id) {
         try {
-            $data = DiseaseForm::where('id', $id);
+            $data = DiseaseForm::with('company','employee')
+            ->where('id', $id)->get();
             return response()->json($data, 200);
         } catch (Exception $e) {
             return response()->json([
