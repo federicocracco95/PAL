@@ -185,6 +185,7 @@
           </div>
         </div>
         <div class="grid md:grid-cols-2 md:gap-2">
+          <!--
           <input
             type="text"
             name="trimester"
@@ -192,6 +193,17 @@
             class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Trimestre di riferimento"
           />
+          -->
+          <select
+            class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
+            v-model="newPractice.trimester"
+          >
+            <option :value="null" disabled>Trimestre di riferimento </option>
+            <option :value="1">Primo trimestre </option>
+            <option :value="2">Secondo trimestre </option>
+            <option :value="3">Terzo trimestre </option>
+            <option :value="4">Quarto trimestre </option>
+          </select>
           <input
             type="text"
             name="weekly_working_hours"
@@ -211,7 +223,7 @@
             name="disease_hours"
             v-model="newPractice.disease_hours"
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
-            placeholder="Ore di malattia/infortunio"
+            placeholder="Ore di malattia"
           />
           <input
             type="text"
@@ -333,7 +345,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni non liquidati"
+                  v-model="newPractice.days_not_cleared_1"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -341,7 +354,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni liquidati"
+                  v-model="newPractice.days_cleared_1"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -349,7 +363,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Importo giornaliero richesto in rimborso"
+                  v-model="newPractice.daily_amount_1"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -360,7 +375,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni non liquidati"
+                  v-model="newPractice.days_not_cleared_2"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -368,7 +384,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni liquidati"
+                  v-model="newPractice.days_cleared_2"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -376,7 +393,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Importo giornaliero richesto in rimborso"
+                  v-model="newPractice.daily_amount_2"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -387,7 +405,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni non liquidati"
+                  v-model="newPractice.days_not_cleared_3"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -395,7 +414,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni liquidati"
+                  v-model="newPractice.days_cleared_3"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -403,7 +423,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Importo giornaliero richesto in rimborso"
+                  v-model="newPractice.daily_amount_3 "
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -414,7 +435,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni non liquidati"
+                  v-model="newPractice.days_not_cleared_4"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -422,7 +444,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni liquidati"
+                  v-model="newPractice.days_cleared_4"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -430,7 +453,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Importo giornaliero richesto in rimborso"
+                  v-model="newPractice.daily_amount_4"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -441,7 +465,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni non liquidati"
+                  v-model="newPractice.days_not_cleared_5"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -449,7 +474,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni liquidati"
+                  v-model="newPractice.days_cleared_5"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -457,7 +483,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Importo giornaliero richesto in rimborso"
+                  v-model="newPractice.daily_amount_5"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -471,7 +498,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni non liquidati"
+                  v-model="newPractice.days_not_cleared_6"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -479,7 +507,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Giorni liquidati"
+                  v-model="newPractice.days_cleared_6"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -487,7 +516,8 @@
               <td>
                 <input
                   type="text"
-                  name="mail"
+                  name="Importo giornaliero richesto in rimborso"
+                  v-model="newPractice.daily_amount_6"
                   class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
                   placeholder=""
                 />
@@ -502,7 +532,8 @@
           <div class="w-1/2 mr-4">
             <input
               type="text"
-              name="mail"
+              name="Totale ore"
+              v-model="newPractice.total_final"
               class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
               placeholder="Da"
             />
@@ -573,8 +604,38 @@ export default {
       selectedCompanyId: null,
       selectedEmployeeId: null,
       newPractice: {
+        extraprofessional_incident: "0",
         car_crash: "0",
-        extraprofessional_incident: "1"
+        trimester: null,
+        ordinary_work_hours: null,
+        disease_hours: null,       
+        cig_hours: null,
+        holidays_and_remunerated_permissions_hours: null,
+        other_remunerated_hours: null,
+        total_hours: null,
+        weekly_working_hours: null,
+        disease_start_date: null,
+        disease_end_date: null,
+        total_disease_days: null,
+        days_not_cleared_1: null,
+        days_cleared_1: null,
+        daily_amount_1: null,
+        days_not_cleared_2: null,
+        days_cleared_2: null,
+        daily_amount_2: null,
+        days_not_cleared_3: null,
+        days_cleared_3: null,
+        daily_amount_3: null,
+        days_not_cleared_4: null,
+        days_cleared_4: null,
+        daily_amount_4: null,
+        days_not_cleared_5: null,
+        days_cleared_5: null,
+        daily_amount_5: null,
+        days_not_cleared_6: null,
+        days_cleared_6: null,
+        daily_amount_6: null,
+        total_final: null
       },
       errors: null,
       isSaving: false,

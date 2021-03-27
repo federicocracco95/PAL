@@ -146,7 +146,15 @@ return [
 
     'attributes' => [
         'practice.trimester' => "trimestre",
-        'practice.ordinary_work_hours' => "ore settimanali di lavoro"
+        'practice.ordinary_work_hours' => "Ore ordinarie di lavoro",
+        'practice.disease_hours' => "Ore di malattia",
+        'practice.weekly_working_hours' => "Ore settimanali di lavoro",
+        'practice.total_hours' => "Totale ore trimestre",
+        'practice.disease_start_date' => "Periodo denunciato: Da",
+        'practice.disease_end_date' => "Periodo denunciato: A",
+        'practice.total_disease_days' => "Periodo denunciato: Giorni",
+        'practice.total_final' => "Totale giorni",
+
     ],
 
 ];

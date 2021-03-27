@@ -45,6 +45,12 @@ class DiseaseFormController extends Controller
             "practice.trimester" => "required",
             "practice.ordinary_work_hours" => "required",
             "practice.disease_hours" => "required",
+            "practice.weekly_working_hours" => "required",
+            "practice.total_hours" => "required",
+            "practice.disease_start_date" => "required",
+            "practice.disease_end_date" => "required",
+            "practice.total_disease_days" => "required",
+            "practice.total_final" => "required",
             // TODO: add field here
         ]);
 

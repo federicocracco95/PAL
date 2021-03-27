@@ -10,6 +10,7 @@ import PraticheInviate from '../views/PraticheInviate.vue'
 import DettaglioPratica from '../views/DettaglioPratica.vue'
 import CreaUtente from '../views/CreaUtente.vue'
 import NotFound from '../views/404.vue'
+import DettaglioPratica from '../views/DettaglioPratica.vue'
 
 Vue.use(VueRouter)
 
@@ -42,6 +43,14 @@ const routes = [
     path: '/nuovapratica',
     name: 'NuovaPratica',
     component: NuovaPratica,
+    meta: {
+      requiresAuth: true,
+    }
+  },
+  {
+    path: '/dettagliopratica',
+    name: 'DettaglioPratica',
+    component: DettaglioPratica,
     meta: {
       requiresAuth: true,
     }
