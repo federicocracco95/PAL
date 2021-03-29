@@ -31,10 +31,23 @@ class AddCompanies extends Migration
             $newinfo_companies->cee_code = "1234";
             $newinfo_companies->consultant_id = NULL;
 
+            $newinfo_companies->save();
+
+            $newinfo_companies = new InfoCompany();
+
+            $newinfo_companies->name = "EdiliziaFerro";
+            $newinfo_companies->cee_code = "4444";
+            $newinfo_companies->consultant_id = NULL;
 
             $newinfo_companies->save();
 
+            $newinfo_companies = new InfoCompany();
 
+            $newinfo_companies->name = "ArteLegno";
+            $newinfo_companies->cee_code = "1112";
+            $newinfo_companies->consultant_id = NULL;
+
+            $newinfo_companies->save();
         });
     }
 

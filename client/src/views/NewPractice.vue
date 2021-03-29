@@ -23,7 +23,7 @@
             v-model="selectedCompanyId"
             class="border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
           >
-            <option :value="undefined">Seleziona Azienda</option>
+            <option :value="null" disabled>Seleziona Azienda</option>
             <option
               v-for="company in companies"
               :key="company.id"
@@ -51,7 +51,7 @@
             v-model="selectedEmployeeId"
             class="border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
           >
-            <option>Seleziona Dipendente</option>
+            <option :value="null" disabled >Seleziona Dipendente</option>
             <option
               v-for="employee in companyEmployees"
               :key="employee.id"
