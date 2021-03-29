@@ -31,7 +31,7 @@ class AddDiseaseForms extends Migration
             $newdisease_forms->disease_start_date = "9/3/2021";
             $newdisease_forms->disease_end_date = "12/3/2021";
             $newdisease_forms->total_disease_days = "3";
-            $newdisease_forms->status = "in progress";
+            $newdisease_forms->status = "check";
             $newdisease_forms->days_not_cleared_3 = "3";
             $newdisease_forms->days_cleared_3 = "15";
             $newdisease_forms->daily_amount_3 = "90";
@@ -54,7 +54,7 @@ class AddDiseaseForms extends Migration
             $newdisease_forms->disease_start_date = "19/2/2020";
             $newdisease_forms->disease_end_date = "29/2/2020";
             $newdisease_forms->total_disease_days = "10";
-            $newdisease_forms->status = "completed";
+            $newdisease_forms->status = "check";
             $newdisease_forms->days_not_cleared_2 = "3";
             $newdisease_forms->days_cleared_2 = "7";
             $newdisease_forms->daily_amount_2 = "80";
@@ -77,7 +77,7 @@ class AddDiseaseForms extends Migration
             $newdisease_forms->disease_start_date = "19/3/2021";
             $newdisease_forms->disease_end_date = "23/3/2021";
             $newdisease_forms->total_disease_days = "4";
-            $newdisease_forms->status = "in progress";
+            $newdisease_forms->status = "check";
             $newdisease_forms->days_not_cleared_3 = "3";
             $newdisease_forms->days_cleared_3 = "10";
             $newdisease_forms->daily_amount_3 = "70";
