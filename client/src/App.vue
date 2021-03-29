@@ -2,7 +2,7 @@
   <div id="app">
     <nav-Grey v-if="!isLogin"></nav-Grey>
     <nav-top v-if="!isLogin"></nav-top>
-    <nav-middle v-if="!isLogin"></nav-middle>
+    <nav-middle v-if="!isLogin" v-show="!isModifica"></nav-middle>
     <router-view/>
     <!--
     <footer-back></footer-back>
@@ -14,6 +14,9 @@ export default {
   computed: {
   isLogin() {
      return this.$route.name === 'Login';
+  },
+  isModifica() {
+     return this.$route.name === 'Modifica';
   }
 }
 }

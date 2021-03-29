@@ -43,10 +43,15 @@
                   </td>
                   <td class="py-3 px-6 text-center">
                     <button
-                      class="bg-blue-800 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center justify-center"
+                      class="mx-4 bg-blue-800 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center justify-center"
                       @click="dettaglio(data.id)"
                     >
-                      <span>Vai</span>
+                      <span>Dettaglio</span>
+                    </button><button
+                      class="mx-4 bg-red-500 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center justify-center"
+                      @click="dettaglio(data.id)"
+                    >
+                      <span>Elimina</span>
                     </button>
                   </td>
                 </tr>
@@ -78,7 +83,7 @@ export default {
   methods: {
     dettaglio(praticaId) {
       this.$router.push({
-        name: "DettaglioPratica",
+        name: "PraticheApprovate",
         params: {
           id: praticaId
         }
