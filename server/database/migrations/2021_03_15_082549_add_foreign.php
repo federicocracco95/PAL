@@ -115,7 +115,7 @@ class AddForeign extends Migration
 
             $fillEmployees->save();
 
-            $fillEmployees = Employee::where('id', 3)->first();
+            $fillEmployees = Employee::where('id', 4)->first();
 
             $fillEmployees->creator_id = 1;
             $fillEmployees->company_id = 4;
