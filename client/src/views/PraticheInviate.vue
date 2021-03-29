@@ -69,7 +69,7 @@ export default {
   props: {},
   async mounted() {
     try {
-      this.forms = await this.$api.get("/diseaseform");
+      this.forms = await this.$api.get("/diseaseform/check");
       console.log(this.forms);
     } catch (e) {
       console.log(e);
