@@ -67,6 +67,23 @@ class AddEmployees extends Migration
 
             $newemployees->save();
 
+            $newemployees = new Employee();
+
+            $newemployees->name = "Andrea";
+            $newemployees->surname = "Lanero";
+            $newemployees->birth_date = "20/3/1966";
+            $newemployees->residence = "Via Manzoni";
+            $newemployees->province = "Alberebello";
+            $newemployees->cap = "34100";
+            $newemployees->fiscal_code = "ANDLNR66S11A459C";
+            $newemployees->cee_code = "ABCF";
+            $newemployees->position = "Tecnico";
+            $newemployees->salary = "1700";
+            $newemployees->hire_date = "15/9/2012";
+
+
+            $newemployees->save();
+
         });
     }
 
