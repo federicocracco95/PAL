@@ -15,7 +15,7 @@
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Ditta"
             disabled
-          />
+          >
           <input
             type="text"
             name="cee_code"

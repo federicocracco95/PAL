@@ -5,8 +5,9 @@ import Login from '../views/Login.vue'
 import Modifica from '../views/Modifica-password.vue'
 import NuovaPratica from '../views/NewPractice.vue'
 import Profilo from '../views/Modifica-profilo.vue'
-import PraticheEffetuate from '../views/PraticheEffetuate.vue'
-import PraticheInviate from '../views/PraticheInviate.vue'
+import PraticheDaControllare from '../views/PraticheDaControllare.vue'
+import PraticheApprovate from '../views/PraticheApprovate.vue'
+import PraticheNonApprovate from '../views/PraticheNonApprovate.vue'
 import DettaglioPratica from '../views/DettaglioPratica.vue'
 import CreaUtente from '../views/CreaUtente.vue'
 import NotFound from '../views/404.vue'
@@ -64,14 +65,6 @@ const routes = [
     }
   },
   {
-    path: '/pratiche-effetuate',
-    name: 'PraticheEffetuate',
-    component: PraticheEffetuate,
-    meta: {
-      requiresAuth: true,
-    }
-  },
-  {
     path: '/crea-utente',
     name: 'CreaUtente',
     component: CreaUtente,
@@ -80,9 +73,25 @@ const routes = [
     }
   },
   {
-    path: '/praticheinviate',
-    name: 'PraticheInviate',
-    component: PraticheInviate,
+    path: '/pratichedacontrollare',
+    name: 'PraticheDaControllare',
+    component: PraticheDaControllare,
+    meta: {
+      requiresAuth: true,
+    }
+  },
+  {
+    path: '/praticheapprovate',
+    name: 'PraticheApprovate',
+    component: PraticheApprovate,
+    meta: {
+      requiresAuth: true,
+    }
+  },
+  {
+    path: '/pratichenonapprovate',
+    name: 'PraticheNonApprovate',
+    component: PraticheNonApprovate,
     meta: {
       requiresAuth: true,
     }
