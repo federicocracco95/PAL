@@ -38,6 +38,11 @@ Route::group(["middleware"=> "auth.api"],function(){
     Route::get("/employee", [EmployeeController::class, "list"]);
 
     Route::get("/diseaseform/check", [DiseaseFormController::class, "listcheck"]);
+    Route::get("/diseaseform/approve", [DiseaseFormController::class, "listapprove"]);
+    Route::get("/diseaseform/notapproved", [DiseaseFormController::class, "listnotapproved"]);
+    Route::put("/diseaseform/approve/{id}", [DiseaseFormController::class, "approve"]);
+    Route::delete("/diseaseform/delete/{id}", [DiseaseFormController::class, "delete"]);
+
     Route::get("/diseaseform/{id}", [DiseaseFormController::class, "getForm"]);
     Route::post("/diseaseform", [DiseaseFormController::class, "store"]);
     //Route::put("/diseaseform/{id}", [DiseaseFormController::class, "edit"]);

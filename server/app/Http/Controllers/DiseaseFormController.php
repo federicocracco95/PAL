@@ -25,6 +25,67 @@ class DiseaseFormController extends Controller
         }
     }
 
+    public function listapproved(Request $Request) {
+
+        try {
+            //$data = DiseaseForm::with('employee')->where('status', 'approved')->get();
+            $data = DiseaseForm::where('status', 'approved')->with('employee')->get();
+            return response()->json($data, 200);
+        } catch (Exception $e) {
+            return response()->json([
+                'message' => "Error in listing all DiseaseForms approved",
+                'status_code' => 500
+            ], 500);
+        }
+    }
+
+    public function listnotapproved(Request $Request) {
+
+        try {
+            //$data = DiseaseForm::with('employee')->where('status')->get();
+            $data = DiseaseForm::where('status', 'not_approved')->with('employee')->get();
+            return response()->json($data, 200);
+        } catch (Exception $e) {
+            return response()->json([
+                'message' => "Error in listing all DiseaseForms not approved",
+                'status_code' => 500
+            ], 500);
+        }
+    }
+
+    public function approve(Request $Request, $id) {
+        $form = DiseaseForm::where('id', $id);
+        try {
+            $form->update(['status' => 'approved']);
+            return response()->json([
+                'message' => "Form approved",
+                'status_code' => 201
+            ], 500);
+        } catch (Exception $e) {
+            $form->update(['status' => 'not_approved']);
+            return response()->json([
+                'message' => "Error: form not approved",
+                'status_code' => 500
+            ], 500);
+        }
+    }
+
+    public function delete(Request $Request, $id) {
+        $form = DiseaseForm::where('id', $id);
+        try {
+            $form->delete();
+            return response()->json([
+                'message' => "Form deleted",
+                'status_code' => 201
+            ], 500);
+        } catch (Exception $e) {
+            return response()->json([
+                'message' => "Error: not deleted",
+                'status_code' => 500
+            ], 500);
+        }
+    }
+
     public function getForm(Request $Request, $id) {
         try {
             $data = DiseaseForm::with([
