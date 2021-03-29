@@ -50,6 +50,23 @@ class AddEmployees extends Migration
 
             $newemployees->save();
 
+            $newemployees = new Employee();
+
+            $newemployees->name = "Giacomo";
+            $newemployees->surname = "Maule";
+            $newemployees->birth_date = "11/6/1999";
+            $newemployees->residence = "Via Lago Garda";
+            $newemployees->province = "Santorso";
+            $newemployees->cap = "37010";
+            $newemployees->fiscal_code = "GCMMUE99S11A459C";
+            $newemployees->cee_code = "ABCC";
+            $newemployees->position = "Capo Cantiere";
+            $newemployees->salary = "1900";
+            $newemployees->hire_date = "1/2/2019";
+
+
+            $newemployees->save();
+
         });
     }
 
