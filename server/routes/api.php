@@ -41,6 +41,7 @@ Route::group(["middleware"=> "auth.api"],function(){
     Route::get("/diseaseform/approve", [DiseaseFormController::class, "listapprove"]);
     Route::get("/diseaseform/notapproved", [DiseaseFormController::class, "listnotapproved"]);
     Route::put("/diseaseform/approve/{id}", [DiseaseFormController::class, "approve"]);
+    Route::put("/diseaseform/notapprove/{id}", [DiseaseFormController::class, "notapprove"]);
     Route::delete("/diseaseform/delete/{id}", [DiseaseFormController::class, "delete"]);
 
     Route::get("/diseaseform/{id}", [DiseaseFormController::class, "getForm"]);

@@ -69,20 +69,34 @@ export default {
   props: {},
   async mounted() {
     try {
-      this.forms = await this.$api.get("/diseaseform/check");
+      this.forms = await this.$api.get("/diseaseform");
       console.log(this.forms);
     } catch (e) {
       console.log(e);
     }
   },
   methods: {
-    dettaglio(praticaId) {
+    async dettaglio(praticaId) {
       this.$router.push({
         name: "DettaglioPratica",
         params: {
           id: praticaId
         }
       });
+    },
+    async deleteForm(id) {
+      await this.$api.delete(`/diseaseform/delete/${id}`);
+      location.reload();
+    },
+
+    async approveForm(id) {
+      await this.$api.put(`/diseaseform/approve/${id}`);
+      location.reload();
+    },
+
+    async notApproveForm(id) {
+      await this.$api.put(`/diseaseform/notapprove/${id}`);
+      location.reload();
     }
   }
 };

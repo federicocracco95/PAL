@@ -64,7 +64,23 @@ class DiseaseFormController extends Controller
         } catch (Exception $e) {
             $form->update(['status' => 'not_approved']);
             return response()->json([
-                'message' => "Error: form not approved",
+                'message' => "Error: approve not successful",
+                'status_code' => 500
+            ], 500);
+        }
+    }
+
+    public function notapprove(Request $Request, $id) {
+        $form = DiseaseForm::where('id', $id);
+        try {
+            $form->update(['status' => 'not_approved']);
+            return response()->json([
+                'message' => "Form not approved",
+                'status_code' => 201
+            ], 500);
+        } catch (Exception $e) {
+            return response()->json([
+                'message' => "Error: not approve not successful",
                 'status_code' => 500
             ], 500);
         }
