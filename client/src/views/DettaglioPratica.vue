@@ -234,31 +234,6 @@
           disabled
         />
 
-        <h3 class="text-lg font-bold py-2">Documenti da allegare:</h3>
-        <ul class="px-4 mb-6">
-          <li>Copia leggibile della documentazione medica;</li>
-          <li>
-            Copia delle buste paga riferite ai periodi chiesti a rimborso (solo
-            in caso di malattie superiori ai 3 gg);
-          </li>
-          <li>
-            Copia delle contabili di pagamento delle buste paga di cui sopra;
-          </li>
-          <li>
-            Copia delle denunce MUT (e relative quietanze di pagamento) qualora
-            per il lavoratore siano state versate;
-          </li>
-          <li>
-            Ore presso altre Casse Edili nel trimestre antecedente l’inizio
-            evento;
-          </li>
-        </ul>
-        <button
-          class="bg-blue-800 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center"
-        >
-          <span>Carica documenti</span>
-        </button>
-
         <div class="mt-8 grid md:grid-cols-2 md:gap-2">
           <input
             type="text"

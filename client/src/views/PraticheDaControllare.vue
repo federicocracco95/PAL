@@ -1,7 +1,7 @@
 <template>
   <div class="praticheinviate">
     <div class="overflow-x-auto">
-      <div class="flex m-4 items-center justify-center overflow-hidden">
+      <div class="flex m-4 items-center justify-center">
         <div class="w-full lg:w-5/6">
           <div class="bg-white shadow-md rounded my-6">
             <table class="min-w-max w-full table-auto">
@@ -44,13 +44,13 @@
                   <td class="py-3 px-6 text-center">
                     <button
                       class="mx-4 bg-green-800 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center justify-center"
-                      @click="dettaglio(data.id)"
+                      @click="approveForm(data.id)"
                     >
                       <span>Approva</span>
                     </button>
                     <button
                       class="mx-4 bg-yellow-400 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center justify-center"
-                      @click="dettaglio(data.id)"
+                      @click="notApproveForm(data.id)"
                     >
                       <span>Non approva</span>
                     </button>
@@ -62,7 +62,7 @@
                     </button>
                     <button
                       class="mx-4 bg-red-500 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center justify-center"
-                      @click="dettaglio(data.id)"
+                      @click="deleteForm(data.id)"
                     >
                       <span>Elimina</span>
                     </button>
@@ -101,6 +101,20 @@ export default {
           id: praticaId
         }
       });
+    },
+    async deleteForm(id) {
+      await this.$api.delete(`/diseaseform/delete/${id}`);
+      location.reload();
+    },
+
+    async approveForm(id) {
+      await this.$api.put(`/diseaseform/approve/${id}`);
+      location.reload();
+    },
+
+    async notApproveForm(id) {
+      await this.$api.put(`/diseaseform/notapprove/${id}`);
+      location.reload();
     }
   }
 };

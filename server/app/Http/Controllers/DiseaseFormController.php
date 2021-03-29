@@ -15,7 +15,8 @@ class DiseaseFormController extends Controller
     public function listcheck(Request $Request) {
 
         try {
-            $data = DiseaseForm::with('employee')->get();
+            $data = DiseaseForm::where('status', 'check')->with('employee')->get();
+            //$data = DiseaseForm::with('employee')->get();
             return response()->json($data, 200);
         } catch (Exception $e) {
             return response()->json([
@@ -60,7 +61,7 @@ class DiseaseFormController extends Controller
             return response()->json([
                 'message' => "Form approved",
                 'status_code' => 201
-            ], 500);
+            ], 201);
         } catch (Exception $e) {
             $form->update(['status' => 'not_approved']);
             return response()->json([
@@ -77,7 +78,7 @@ class DiseaseFormController extends Controller
             return response()->json([
                 'message' => "Form not approved",
                 'status_code' => 201
-            ], 500);
+            ], 201);
         } catch (Exception $e) {
             return response()->json([
                 'message' => "Error: not approve not successful",
@@ -93,7 +94,7 @@ class DiseaseFormController extends Controller
             return response()->json([
                 'message' => "Form deleted",
                 'status_code' => 201
-            ], 500);
+            ], 201);
         } catch (Exception $e) {
             return response()->json([
                 'message' => "Error: not deleted",

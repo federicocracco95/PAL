@@ -77,7 +77,7 @@ export default {
         localStorage.setItem("user", JSON.stringify(res.logged_in_user));
         this.user = JSON.parse(localStorage.getItem("user"));
         if (!this.user['first_time_login']) {
-        this.$router.push("/praticheinviate");
+        this.$router.push("/pratichedacontrollare");
       }
         this.$router.push("/modifica");
       } catch (error) {
@@ -86,7 +86,7 @@ export default {
       if (this.user['first_time_login']) {
         this.$router.push("/modifica");
       } else {
-        this.$router.push("/praticheinviate");
+        this.$router.push("/pratichedacontrollare");
       }
     },
 

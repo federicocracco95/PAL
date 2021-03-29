@@ -1,7 +1,7 @@
 <template>
   <div class="praticheinviate">
     <div class="overflow-x-auto">
-      <div class="flex m-4 items-center justify-center overflow-hidden">
+      <div class="flex m-4 items-center justify-center">
         <div class="w-full lg:w-5/6">
           <div class="bg-white shadow-md rounded my-6">
             <table class="min-w-max w-full table-auto">
@@ -49,7 +49,7 @@
                       <span>Dettaglio</span>
                     </button><button
                       class="mx-4 bg-red-500 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center justify-center"
-                      @click="dettaglio(data.id)"
+                      @click="deleteForm(data.id)"
                     >
                       <span>Elimina</span>
                     </button>
@@ -74,7 +74,7 @@ export default {
   props: {},
   async mounted() {
     try {
-      this.forms = await this.$api.get("/diseaseform");
+      this.forms = await this.$api.get("/diseaseform/approve");
       console.log(this.forms);
     } catch (e) {
       console.log(e);
@@ -83,7 +83,7 @@ export default {
   methods: {
     async dettaglio(praticaId) {
       this.$router.push({
-        name: "PraticheApprovate",
+        name: "DettaglioPratica",
         params: {
           id: praticaId
         }
@@ -93,16 +93,6 @@ export default {
       await this.$api.delete(`/diseaseform/delete/${id}`);
       location.reload();
     },
-
-    async approveForm(id) {
-      await this.$api.put(`/diseaseform/approve/${id}`);
-      location.reload();
-    },
-
-    async notApproveForm(id) {
-      await this.$api.put(`/diseaseform/notapprove/${id}`);
-      location.reload();
-    }
   }
 };
 </script>

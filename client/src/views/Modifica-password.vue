@@ -83,7 +83,7 @@ export default {
       this.user = JSON.parse(localStorage.getItem("user"));
 
       if (!this.user['first_time_login']) {
-        this.$router.push("/praticheinviate");
+        this.$router.push("/pratichedacontrollare");
       }
   },
   methods: {
@@ -96,7 +96,7 @@ export default {
             password: this.oldPassword,
             newPassword: this.newPassword
             });
-            this.$router.push("/praticheinviate");
+            this.$router.push("/pratichedacontrollare");
             
         } catch (error) {
             this.error = "Errore nell'invio";

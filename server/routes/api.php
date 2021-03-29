@@ -38,7 +38,7 @@ Route::group(["middleware"=> "auth.api"],function(){
     Route::get("/employee", [EmployeeController::class, "list"]);
 
     Route::get("/diseaseform/check", [DiseaseFormController::class, "listcheck"]);
-    Route::get("/diseaseform/approve", [DiseaseFormController::class, "listapprove"]);
+    Route::get("/diseaseform/approve", [DiseaseFormController::class, "listapproved"]);
     Route::get("/diseaseform/notapproved", [DiseaseFormController::class, "listnotapproved"]);
     Route::put("/diseaseform/approve/{id}", [DiseaseFormController::class, "approve"]);
     Route::put("/diseaseform/notapprove/{id}", [DiseaseFormController::class, "notapprove"]);

@@ -579,11 +579,6 @@
               >{{ e[0] }}
             </span>
           </div>
-          <button
-            class="bg-gray-400 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center ml-auto"
-          >
-            <span>Genera pdf</span>
-          </button>
         </div>
       </div>
     </div>
