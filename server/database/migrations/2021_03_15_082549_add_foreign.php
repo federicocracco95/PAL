@@ -22,7 +22,6 @@ class AddForeign extends Migration
 
             $fillUser = User::where('id', 2)->first();
 
-            
             $fillUser->info_company_id = 1;
 
             $fillUser->save();
@@ -48,6 +47,18 @@ class AddForeign extends Migration
             $fillConsultants->creator_id = 1;
 
             $fillConsultants->save();
+
+            $fillConsultants = InfoConsultant::where('id', 3)->first();
+
+            $fillConsultants->creator_id = 1;
+
+            $fillConsultants->save();
+
+            $fillConsultants = InfoConsultant::where('id', 4)->first();
+
+            $fillConsultants->creator_id = 1;
+
+            $fillConsultants->save();
         });
 
         Schema::table('info_companies', function (Blueprint $table) {
@@ -63,6 +74,20 @@ class AddForeign extends Migration
 
             $fillCompanies->creator_id = 1;
             $fillCompanies->consultant_id = 2;
+
+            $fillCompanies->save();
+
+            $fillCompanies = InfoCompany::where('id', 3)->first();
+
+            $fillCompanies->creator_id = 1;
+            $fillCompanies->consultant_id = 3;
+
+            $fillCompanies->save();
+
+            $fillCompanies = InfoCompany::where('id', 4)->first();
+
+            $fillCompanies->creator_id = 1;
+            $fillCompanies->consultant_id = 4;
 
             $fillCompanies->save();
         });
@@ -82,6 +107,20 @@ class AddForeign extends Migration
             $fillEmployees->company_id = 2;
 
             $fillEmployees->save();
+
+            $fillEmployees = Employee::where('id', 3)->first();
+
+            $fillEmployees->creator_id = 1;
+            $fillEmployees->company_id = 3;
+
+            $fillEmployees->save();
+
+            $fillEmployees = Employee::where('id', 3)->first();
+
+            $fillEmployees->creator_id = 1;
+            $fillEmployees->company_id = 4;
+
+            $fillEmployees->save();
         });
 
         Schema::table('disease_forms', function (Blueprint $table) {
@@ -99,6 +138,22 @@ class AddForeign extends Migration
             $fillForms->creator_id = 1;
             $fillForms->employee_id = 2;
             $fillForms->company_id = 2;
+
+            $fillForms->save();
+
+            $fillForms = DiseaseForm::where('id', 3)->first();
+
+            $fillForms->creator_id = 1;
+            $fillForms->employee_id = 3;
+            $fillForms->company_id = 3;
+
+            $fillForms->save();
+
+            $fillForms = DiseaseForm::where('id', 3)->first();
+
+            $fillForms->creator_id = 1;
+            $fillForms->employee_id = 4;
+            $fillForms->company_id = 4;
 
             $fillForms->save();
         });
