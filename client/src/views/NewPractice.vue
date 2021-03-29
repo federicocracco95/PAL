@@ -281,11 +281,11 @@
             evento;
           </li>
         </ul>
-        <button
-          class="bg-blue-800 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center"
-        >
-          <span>Carica documenti</span>
-        </button>
+        <label for="file-upload" class="bg-blue-800 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center">
+          Carica documenti
+        </label>
+        <input id="file-upload" type="file" style="display:none" multiple/>
+        
 
         <div class="mt-8 grid md:grid-cols-2 md:gap-2">
           <input
@@ -707,6 +707,10 @@ export default {
 <style>
 ul {
   list-style-type: circle !important;
+}
+
+input[type="file"] {
+    display: none;
 }
 
 </style>

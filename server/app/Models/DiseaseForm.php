@@ -39,14 +39,14 @@ class DiseaseForm extends Model
 
     public function employee()
     {
-        return $this->hasMany(Employee::class,'id');
+        return $this->belongsTo(Employee::class);
     }
 
     public function company()
     {
-        return $this->hasOne(Employee::class,'id');
+        return $this->belongsTo(InfoCompany::class, 'company_id');
     }
-    
+
 
     public $guarded = [];
 }

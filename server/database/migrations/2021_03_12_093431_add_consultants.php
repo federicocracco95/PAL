@@ -30,6 +30,20 @@ class AddConsultants extends Migration
             $newinfo_consultants->surname = "Ferrari";
 
             $newinfo_consultants->save();
+
+            $newinfo_consultants = new InfoConsultant();
+
+            $newinfo_consultants->name = "Lucia";
+            $newinfo_consultants->surname = "Trento";
+
+            $newinfo_consultants->save();
+
+            $newinfo_consultants = new InfoConsultant();
+
+            $newinfo_consultants->name = "Anna";
+            $newinfo_consultants->surname = "Alcetti";
+
+            $newinfo_consultants->save();
         });
     }
 

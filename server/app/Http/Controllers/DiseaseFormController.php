@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Validator;
 
 class DiseaseFormController extends Controller
 {
-    public function list(Request $Request) {
+    public function listcheck(Request $Request) {
 
         try {
             $data = DiseaseForm::with('employee')->get();
@@ -27,8 +27,13 @@ class DiseaseFormController extends Controller
 
     public function getForm(Request $Request, $id) {
         try {
-            $data = DiseaseForm::with('company','employee')
-            ->where('id', $id)->get();
+            $data = DiseaseForm::with([
+                'company',
+                'employee'
+            ])
+            ->where('id', $id)
+            ->get();
+
             return response()->json($data, 200);
         } catch (Exception $e) {
             return response()->json([
@@ -68,7 +73,7 @@ class DiseaseFormController extends Controller
                 "company_id" => $newPracticeData['company']['id'],
                 "employee_id" => $newPracticeData['employee']['id'],
                 "creator_id" => Auth::user()->id,
-                "status" => "in progress",
+                "status" => "check",
             ],
             $newPracticeData['practice'])
         );
@@ -79,6 +84,6 @@ class DiseaseFormController extends Controller
     }
 
     public function edit(Request $Request) {
-        
+
     }
 }
