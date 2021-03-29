@@ -8,14 +8,14 @@
       </div>
       <div class="container mx-auto px-10">
         <div class="grid md:grid-cols-2 md:gap-2">
-          <input
-            type="text"
-            name="company"
+          <select
+            class="border rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             v-model="form.company.id"
-            class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
-            placeholder="Ditta"
             disabled
-          />
+          >
+            <option :value="1">Calcetruzzlvo </option>
+            <option :value="2">Mattone4L </option>
+          </select>
           <input
             type="text"
             name="cee_code"
