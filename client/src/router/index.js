@@ -48,7 +48,7 @@ const routes = [
     }
   },
   {
-    path: '/dettagliopratica',
+    path: '/dettagliopratica/:id',
     name: 'DettaglioPratica',
     component: DettaglioPratica,
     meta: {
@@ -118,7 +118,7 @@ router.beforeEach((to, from, next) => {
 
     // if route requires auth
     if (localStorage.getItem('user')) {
-      
+
       // if user is logged in
       console.log('auth: OK, vai pure')
       next()

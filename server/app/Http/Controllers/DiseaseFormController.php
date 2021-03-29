@@ -27,8 +27,13 @@ class DiseaseFormController extends Controller
 
     public function getForm(Request $Request, $id) {
         try {
-            $data = DiseaseForm::with('company','employee')
-            ->where('id', $id)->get();
+            $data = DiseaseForm::with([
+                'company',
+                'employee'
+            ])
+            ->where('id', $id)
+            ->get();
+
             return response()->json($data, 200);
         } catch (Exception $e) {
             return response()->json([
@@ -79,6 +84,6 @@ class DiseaseFormController extends Controller
     }
 
     public function edit(Request $Request) {
-        
+
     }
 }
