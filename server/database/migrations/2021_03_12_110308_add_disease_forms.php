@@ -43,7 +43,7 @@ class AddDiseaseForms extends Migration
 
             $newdisease_forms->extraprofessional_incident = "1";
             $newdisease_forms->car_crash = "1";
-            $newdisease_forms->trimester = "9";
+            $newdisease_forms->trimester = "2";
             $newdisease_forms->ordinary_work_hours = "8";
             $newdisease_forms->disease_hours = "80";
             $newdisease_forms->cig_hours = "1";
