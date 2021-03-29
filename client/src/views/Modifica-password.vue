@@ -1,6 +1,5 @@
 <template>
   <div class="modifica">
-      <pre>{{ user }}</pre>
     <div class="flex items-center bg-white dark:bg-gray-900">
       <div class="container mx-auto">
         <div class="bg-gray-300 rounded-lg p-4 max-w-md mx-auto my-10">
