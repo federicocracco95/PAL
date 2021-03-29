@@ -281,6 +281,7 @@
             evento;
           </li>
         </ul>
+        
         <label for="file-upload" class="bg-blue-800 outline-none text-white font-bold py-2 px-4 rounded inline-flex items-center">
           Carica documenti
         </label>

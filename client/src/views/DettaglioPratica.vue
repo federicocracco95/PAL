@@ -11,7 +11,7 @@
           <input
             type="text"
             name="company"
-            v-model="form.company.id"
+            v-model="form.company.name"
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Ditta"
             disabled
@@ -27,7 +27,7 @@
           <input
             type="text"
             name="full_name"
-            v-model="form.company.full_name"
+            v-model="completeName"
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Al Signor"
             disabled
@@ -35,7 +35,7 @@
           <input
             type="text"
             name="birth_date"
-            v-model="form.company.birth_date"
+            v-model="form.employee.birth_date"
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Nato il"
             disabled
@@ -43,7 +43,7 @@
           <input
             type="text"
             name="residence"
-            v-model="form.company.residence"
+            v-model="form.employee.residence"
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Residente a"
             disabled
@@ -51,7 +51,7 @@
           <input
             type="text"
             name="province"
-            v-model="form.company.province"
+            v-model="form.employee.province"
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Prov."
             disabled
@@ -59,7 +59,7 @@
           <input
             type="text"
             name="cap"
-            v-model="form.company.cap"
+            v-model="form.employee.cap"
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Cap"
             disabled
@@ -67,7 +67,7 @@
           <input
             type="text"
             name="position"
-            v-model="form.company.position"
+            v-model="form.employee.position"
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Qualifica"
             disabled
@@ -75,7 +75,7 @@
           <input
             type="text"
             name="salary"
-            v-model="form.company.salary"
+            v-model="form.employee.salary"
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Paga oraria"
             disabled
@@ -83,7 +83,7 @@
           <input
             type="text"
             name="hire_date"
-            v-model="form.company.hire_date"
+            v-model="form.employee.hire_date"
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Data assunzione"
             disabled
@@ -263,7 +263,7 @@
           <input
             type="text"
             name="full_name"
-            v-model="form.company.full_name"
+            v-model="completeName"
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Signor"
             disabled
@@ -271,7 +271,7 @@
           <input
             type="text"
             name="birth_date"
-            v-model="form.company.birth_date"
+            v-model="form.employee.birth_date"
             class="border shadow-sm rounded h-10 w-full focus:outline-none focus:border-blue-800 px-2 mt-2 text-sm"
             placeholder="Nato il"
             disabled
@@ -545,6 +545,7 @@ export default {
   data() {
     return {
       form: [],
+      completeName: null,
       errors: null,
       id: this.$route.params.id,
     };
@@ -553,6 +554,7 @@ export default {
   async mounted() {
     const res = await this.$api.get(`/diseaseform/${this.id}`);
     this.form = res[0];
+    this.completeName = this.form.employee.name + " " + this.form.employee.surname;
     },
 
   methods: {
